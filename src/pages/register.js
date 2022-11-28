@@ -33,7 +33,6 @@ export default () => {
       const inputPassword = container.querySelector('#passwordUser');
       const inputUserName = container.querySelector('#nameUser');
       const printError = container.querySelector('#print-error-here');
-      const typeUser = container.querySelector('.typeUSer');
 
       function validatePassword() {
         if (inputUserName.value === '' || inputEmail.value === '' || inputPassword.value === '' || inputNewPassword.value === '') {
