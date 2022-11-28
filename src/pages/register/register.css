@@ -66,5 +66,37 @@
   font-weight: bold;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1028px) {
+  .register-body {
+    display: flex;
+  }
+
+  .register-infos {
+    margin: 7rem;
+  }
+
+  .register-logo-blue {
+    width: 20rem;
+    height: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .register-infos h1 {
+    font-size: 26px;
+    margin-bottom: 3rem;
+  }
+
+  .register-main {
+    margin: 5rem;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .register-infos {
+    margin: 15rem;
+  }
+
+  .register-main {
+    margin: 10rem;
+  }
 }
