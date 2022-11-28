@@ -48,7 +48,7 @@ export default () => {
 
       function validatePassword() {
         if (inputUserName.value === '' || inputEmail.value === '' || inputPassword.value === '' || inputData.value === '' ) {
-          printError.innerHTML = "Por favor, preencha todos os campos";
+          printError.innerHTML = "Por favor, preencha todos os campos!";
         } else {
           const email = inputEmail.value;
           const password = inputPassword.value;
