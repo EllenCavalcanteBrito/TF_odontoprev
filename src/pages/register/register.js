@@ -6,26 +6,26 @@ export default () => {
     const template = `
         <div class="register-body">
           <div class="register-infos">
-            Odontoprev<br>
+            <img class="register-logo-blue" src="./logo/logo_odontoprev_azul_fundo_branco.jpg" alt='Logo odontoprev em azul'>
             <h1>Líder em planos odontológicos na América Latina.</h1>
             <h2>Junte-se aos mais de 8 milhões de beneficiários!</h2>
           </div>
 
           <div class="register-main">
             <form class="register-form">
-              <input id="cpfCpnjUser" class="register-input" type="text" placeholder="CPF ou CNPJ" >
+              <div class="register-input-radio">
+                <input id="registerInputBeneficiario" type="radio" name="typeUser" required="required" value="Beneficiário"/>
+                <label>Beneficiário</label>
+                <input id="registerInputCredenciado" type="radio" name="typeUser" required="required" value="Credenciado"/>
+                <label>Credenciado</label>                
+              </div>
+
+              <input id="registerInputCro" class="register-input-cro" type="text" placeholder="CRO" maxlength="6"/>
+
+              <input id="cpfCpnjUser" class="register-input" type="number" placeholder="CPF ou CNPJ" >
               <input id="nameUser" class="register-input" type="text" placeholder="Nome Completo" > 
               <input id="emailUser" class="register-input" type="email" placeholder="E-mail" >
               <input id="passwordUser" class="register-input" type="password" placeholder="Senha">
-
-              <div class="register-input-radio">
-                <input type="radio" name="typeUser" required="required" value="Beneficiário"/>
-                <label>Beneficiário</label>
-                <input id="registerInputCredenciado" type="radio" name="typeUser" required="required" value="Credenciado"/>
-                <label>Credenciados</label>                
-              </div>
-
-              <input id="registerInputCro" class="register-input" type="text" placeholder="CRO"/>
             
               <div id="print-error-here"></div> 
 
@@ -36,20 +36,19 @@ export default () => {
       `;
       container.innerHTML = template;
 
+      const beneficiario = container.querySelector('#registerInputBeneficiario');
       const buttonRegister = container.querySelector('#button-register');
+      const credenciado = container.querySelector('#registerInputCredenciado');
+      const inputData = container.querySelector('#cpfCpnjUser');
       const inputEmail = container.querySelector('#emailUser');
-      const inputNewPassword = container.querySelector('#confirmPassword'); // não tera confirmação
       const inputPassword = container.querySelector('#passwordUser');
       const inputUserName = container.querySelector('#nameUser');
       const printError = container.querySelector('#print-error-here');
-      const typeUser = container.querySelector('.typeUSer');
-      const credenciado = container.querySelector('#registerInputCredenciado');
+      const showCredenciado = container.querySelector('#registerInputCro');
 
       function validatePassword() {
-        if (inputUserName.value === '' || inputEmail.value === '' || inputPassword.value === '' || inputNewPassword.value === '') {
+        if (inputUserName.value === '' || inputEmail.value === '' || inputPassword.value === '' || inputData.value === '' ) {
           printError.innerHTML = "Por favor, preencha todos os campos";
-        } else if (inputPassword.value !== inputNewPassword.value) {
-          printError.innerHTML = "A senha digitada está diferente em um dos campos.";
         } else {
           const email = inputEmail.value;
           const password = inputPassword.value;
@@ -76,15 +75,13 @@ export default () => {
     
       buttonRegister.addEventListener('click', validatePassword);
 
-      // credenciado.addEventListener('click', () => {
-      //   const showCredenciado = containerHeader.querySelector('#registerInputCro');
-    
-      //   if (showCredenciado.style.display === 'block') {
-      //     showCredenciado.style.display = 'none';
-      //   } else {
-      //     showCredenciado.style.display = 'block';
-      //   }
-      // });
+      credenciado.addEventListener('click', () => {        
+        showCredenciado.style.display = 'block';
+      });
+
+      beneficiario.addEventListener('click', () => {
+        showCredenciado.style.display = 'none';
+      });
 
       return container;
 };
