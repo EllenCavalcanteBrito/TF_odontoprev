@@ -42,8 +42,11 @@ export default () => {
       const inputPassword = container.querySelector('#passwordUser');
       const inputUserName = container.querySelector('#nameUser');
       const printError = container.querySelector('#print-error-here');
+<<<<<<< HEAD:src/pages/register/register.js
       const typeUser = container.querySelector('.typeUSer');
       const credenciado = container.querySelector('#registerInputCredenciado');
+=======
+>>>>>>> 07b2b3b16f90a474ebf687206a32c4b08b90d9fc:src/pages/register.js
 
       function validatePassword() {
         if (inputUserName.value === '' || inputEmail.value === '' || inputPassword.value === '' || inputNewPassword.value === '') {
