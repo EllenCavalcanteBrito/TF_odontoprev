@@ -22,7 +22,7 @@ export default () => {
                 <input type="radio" name="typeUser" required="required" value="Beneficiário"/>
                 <label>Beneficiário</label>
                 <input id="registerInputCredenciado" type="radio" name="typeUser" required="required" value="Credenciado"/>
-                <label>Credenciado</label>                
+                <label>Credenciados</label>                
               </div>
 
               <input id="registerInputCro" class="register-input" type="text" placeholder="CRO"/>
