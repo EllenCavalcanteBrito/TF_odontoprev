@@ -1,0 +1,29 @@
+/* @import url('./pages/xxx/xxx.css');
+@import url('./pages/xxx/xxx.css');
+@import url('./pages/xxx/xxx.css'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;  
+    font-size: 16px;
+    font-family: NotoSans, Arial, Helvetica, sans-serif;
+  }
+  
+  :root {
+    --white: aliceblue;
+    --orange: #ED6B0D;
+    --blue: #0165FE;
+    --lead: #9A9494;
+    --grey: #D9D9D9;
+    --black: #000000;
+  }
+  
+  body, html {
+    background: var(--white);  
+    background-size: cover;
+    background-attachment: fixed; 
+  }
