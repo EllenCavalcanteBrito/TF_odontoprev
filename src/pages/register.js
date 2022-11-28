@@ -12,9 +12,9 @@ export default () => {
             </br>
 
               <p> 
-                 <input type="radio" name="typeUser" required="required" class="typeUser" value="beneficiario"/>
+                 <input type="radio" name="typeUser" required="required" value="beneficiario"/>
                  <label>Beneficiário</label>
-                 <input type="radio" name="typeUser" required="required" class="typeUser" value="Credenciado"/>
+                 <input type="radio" name="typeUser" required="required" value="Credenciado"/>
                  <label>Credenciado</label>                
               </p> 
             </br>
@@ -36,7 +36,7 @@ export default () => {
       const typeUser = container.querySelector('.typeUSer');
 
       function validatePassword() {
-        if (inputUserName.value === '' || typeUser.value === '' || inputEmail.value === '' || inputPassword.value === '' || inputNewPassword.value === '') {
+        if (inputUserName.value === '' || inputEmail.value === '' || inputPassword.value === '' || inputNewPassword.value === '') {
           printError.innerHTML = "Por favor, preencha todos os campos";
         } else if (inputPassword.value !== inputNewPassword.value) {
           printError.innerHTML = "A senha digitada está diferente em um dos campos.";
