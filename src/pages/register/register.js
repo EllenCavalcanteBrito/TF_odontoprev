@@ -7,7 +7,7 @@ export default () => {
         <div class="register-body">
           <div class="register-infos">
             <img class="register-logo-blue" src="./logo/logo_odontoprev_azul_fundo_branco.jpg" alt='Logo odontoprev em azul'>
-            <h1>Líder em planos odontológicos na América Latina.</h1>
+            <h1>Líder em planos odontológicos<br> na América Latina.</h1>
             <h2>Junte-se aos mais de 8 milhões de beneficiários!</h2>
           </div>
 
