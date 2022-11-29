@@ -1,4 +1,3 @@
-# TF_odontoprev
 
 <a name="readme-top"></a>
 
@@ -8,82 +7,72 @@
     <img src="https://odontoprevsite.com.br/site/wp-content/uploads/2020/11/odontoprev-logo.png" alt="Logo" width="150" height="80">
   </a>
 
-<h3 align="center">Readme</h3>
+<h3 align="center">Readme - FT Odontoprev</h3>
 
   <p align="center">
     <br />
     <a href="http://git.odontoprev.com.br/arquitetura/arquitetura-padroes/"><strong>Explore o projeto »</strong></a>
+
+  <br>
+  
+  **Status do Projeto:** _Em desenvolvimento_ 
     <br />
     <br />
-    <a href="http://git.odontoprev.com.br/arquitetura/arquitetura-padroes/issues">Reportar um Bug</a>
+     <a href = "mailto:odontoprev1.tf@gmail.com">Reportar um bug</a>
     ·
-    <a href="http://git.odontoprev.com.br/arquitetura/arquitetura-padroes/issues">Solicitar alteração</a>
+    <a href = "mailto:odontoprev1.tf@gmail.com">Solicitar alteração</a>
   </p>
+
+
 </div>
 
 ## Sumário
 * [Sobre o Projeto](#sobre-o-projeto)
 * [Aplicação](#aplicação)
-  * [Contrato da API](#swagger-ui)
-  * [Exemplos de End-Points](#exemplos-de-end-points)
+* [Protótipo](#protótipo)
 * [Utilizado Por](#utilizado-por)
+* [Contato](#contato)
 
 ## Sobre o projeto
-TESTE
-
-### Versão da API
-
-TESTE
-
-### Versão Java
-
-TESTE
+Este projeto tem como objetivo a criação de uma aplicação para marcar consultas com dentistas da rede credenciada pelo aplicativo beneficiário, este desafio foi proposto pela empresa Odontoprev.
+E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008, e deve ser concluído em até três dias.
 
 ### Tecnologias Utilizadas
 
-* [![JBoss][JBoss.com]][JBoss-url]
-* [![Weblogic][Weblogic.com]][Weblogic-url]
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="height: 30px;"/> `HTML`
+
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="height: 30px;"/> `CSS`
+
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="height: 30px;"/> `Javascript`
+
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt="Node.js" style="height: 30px;"/> `NodeJs`
+
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="height: 30px;"/> `Github`
+
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="height: 30px;"/>`Figma`
+
+  </br>
 
 ## Banco de dados
-[![Oracle][Oracle]][Oracle-url][![DbPort]][Oracle-url][![DbVersion]][Oracle-url]
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" style="height: 30px;"/> Firebase 
 
-<details>
-  <summary>Tabelas Utilizadas</summary>
-  <ul>
-  <li>
-  <i>TESTE</i>
-  </li>
-  </ul>
-</details>
+</br>
+
 
 ## Aplicação
 
 ![Localhost]![AppPort]
 
+## Protótipo
+</br>
 
-### Exemplos de End-Points
 
-
----
-
-Tipo: ``GET``
-
-```
-	GET  /teste/teste
-```
-```
-	GET  /teste/teste
-```
 ## Guia de comandos
 
 
 ---
 ## Utilizado por
-
-O projeto é utilizado pelos seguintes sistemas:
-
-- TESTE
-- TESTE
+O projeto pode ser utilizado em qualquer sistema operacional.
 
 ## Contribuindo
 
@@ -95,11 +84,12 @@ O projeto é utilizado pelos seguintes sistemas:
 
 ## Contato
 
-Time responsavel:TESTE
-
-Lider Tecnico responsavel:TESTE
-
-Lider de sustentação responsavel:TESTE
+* Alana Cardoso: [Linkedin](https:www.linkedin.com/in/alana-karine) | [GitHub](https:https://github.com/AlanaK2)
+* Barbara Scatolin: [Linkedin](https://www.linkedin.com/in/barbara-scatolin/) | [GitHub](https://github.com/oxibarbara)
+* Ellen Cavalcante: [Linkedin](https://www.linkedin.com/in/ellencavalcantebrito/) | [GitHub](https://github.com/EllenCavalcanteBrito)
+* Gleyciane Macena [Linkedin](https://www.linkedin.com/in/gleyciane-macena-costa/) | [GitHub](https://github.com/Gleyciane-Macena)
+* Nathalia Rigo: [Linkedin](https://www.linkedin.com/in/nathaliarigo/) | [GitHub](https://github.com/ncrigo)
+* Thaina Prado [Linkedin](https://www.linkedin.com/in/thaina-prado-893b3b102/) | [GitHub](https://github.com/Thainaprado7)
 
 [⬆ Voltar ao topo](README_Template.md)<br>
 
@@ -166,8 +156,8 @@ Lider de sustentação responsavel:TESTE
 
 [DbVersion]: https://img.shields.io/badge/v12.3-green?style=for-the-badge
 
-[AppPort]: https://img.shields.io/badge/8080-blue?style=for-the-badge
+[AppPort]: https://img.shields.io/badge/3000-blue?style=for-the-badge
 [Localhost]: https://img.shields.io/badge/Localhost-orange?style=for-the-badge
 
 [Swagger]: https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=white
-[Swagger-url]: http://localhost:8080/portalempresa-cadastroOnline-pj/swagger-ui.html#
+[Swagger-url]: http://localhost:3000/portalempresa-cadastroOnline-pj/swagger-ui.html#
