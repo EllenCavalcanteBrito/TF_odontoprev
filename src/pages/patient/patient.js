@@ -26,10 +26,8 @@ export default () => {
                 <option value='Sul'>Sul</option>
             </select>
         </div>
-        <section class= 'container-dentists'>
-        <p class='info1'><img class='icon-people' src='./icon/usuario.png' alt='icon people'>Nome do profissional:</p>
-        <p class='info2'><img class='icon-document' src='./icon/document-writer.png' alt='icon document'>CNPJ:</p>
-        <p class='info3'><img class='icon-cro' src='./icon/document-identification.png' alt='icon cro'>CRO:</p>
+        <section class= 'containerDentists'>
+
         </section>
     </div>
     `;
@@ -50,10 +48,22 @@ export default () => {
         btnHelp.addEventListener('click', () => {
             window.location.href = 'https://beneficiario.odontoprev.com.br/perguntas-frequentes';
           });
-
+          const printAqui = container.querySelector('.containerDentists');
+          const btnSelect = container.querySelector('#select-grid');
+          btnSelect.addEventListener('change', () => {
+          return printAqui.innerHTML = `
+          <div class='container-dentists'>
+              <p class='info1'><img class='icon-people' src='./icon/usuario.png' alt='icon people'>Nome do profissional:</p>
+              <p class='info2'><img class='icon-document' src='./icon/document-writer.png' alt='icon document'>CNPJ:</p>
+              <p class='info3'><img class='icon-cro' src='./icon/document-identification.png' alt='icon cro'>CRO:</p>
+          </div>
+          `;
+        });
         
         return container;
       };
 
     
-    
+     // const containerDentists = container.querySelector('#containerDentists');
+      // containerDentists.appendChild(dentists);
+
