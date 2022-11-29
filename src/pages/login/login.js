@@ -9,16 +9,14 @@ export default () => {
         <h1 class="msg-login">Faça seu login</h1>
       </div>
       <div class="form">
-        <div>
-          <label class="login-label" id="loginLabel" for="email">  
-            <input id="inputEmail" class="inputEmail" type="email" placeholder=" E-mail" name="email" required>
-          </label>
-        </div>
+          <input id="inputEmail" class="inputEmail" type="email" placeholder=" E-mail" name="email" required>
           <input id="inputPassword" class="inputPassword" type="password" placeholder="Senha" name="password" required>
-        <div class="esqueci"><p>  Esqueci minha senha <a href="#" id="esqueci"></p></div>
+            <span id="recover" class="esqueci">Esqueci a minha senha</span>
         <button type="button" id="button-enter" class="button-enter">Entrar</button>
         <div id="print-error-here"></div> 
+        <div class="nconta">
         <p>Não tem uma conta? <a href="#register" id="signUp" class="conta"> Cadastre-se! </p></div>
+        </div>      
       </div>
 
     </div>
@@ -27,6 +25,7 @@ export default () => {
 container.innerHTML = template;
 
 const buttonEnter = container.querySelector('#button-enter');
+const buttonRecover = container.querySelector('#recover');
 const printError = container.querySelector('#print-error-here');
 const inputEmail = container.querySelector('#inputEmail');
 const inputPassword = container.querySelector('#inputPassword');
@@ -48,6 +47,19 @@ buttonEnter.addEventListener('click', (event) => {
       } else if (errorCode === 'auth/wrong-password') {
         printError.innerHTML = "A senha é inválida para o e-mail fornecido.";
       } else {
+        printError.innerHTML = "Algo deu errado. Por favor, tente novamente.";
+      }
+    });
+});
+
+buttonRecover.addEventListener('click', (event) => {
+  event.preventDefault();
+  const email = inputEmail.value;
+  firebase.auth().sendPasswordResetEmail(email)
+    .then(() => {
+    }).catch((error) => {
+      const errorCode = error.code;
+      if (errorCode) {
         printError.innerHTML = "Algo deu errado. Por favor, tente novamente.";
       }
     });

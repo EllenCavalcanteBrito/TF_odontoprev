@@ -49,16 +49,23 @@
     border-radius: 10px;
     margin-top: 20px;
     font-weight: bold;
+    justify-self: center;
     text-transform: uppercase;    
     font-size: 1.3rem;
 }
+
 .esqueci{
     color: var(--white);
-    font-size: 10%;
-    text-align: left;
+    justify-self: left;
+    text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 90%;
 }
-
+.nconta{
+    color: var(--white);
+}
 .conta{
     color: var(--white);
     font-size: 90%;
