@@ -33,39 +33,50 @@
 * [Utilizado Por](#utilizado-por)
 * [Contato](#contato)
 
+</br>
+
 ## Sobre o projeto
 Este projeto tem como objetivo a criação de uma aplicação para marcar consultas com dentistas da rede credenciada pelo aplicativo beneficiário, este desafio foi proposto pela empresa Odontoprev.
 E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008, e deve ser concluído em até três dias.
 
+</br>
+
 ### Tecnologias Utilizadas
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="height: 30px;"/> `HTML`
+  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="height: 30px;"/> `HTML`
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="height: 30px;"/> `CSS`
+  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="height: 30px;"/> `CSS`
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="height: 30px;"/> `Javascript`
+  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="height: 30px;"/> `Javascript`
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt="Node.js" style="height: 30px;"/> `NodeJs`
+  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt="Node.js" style="height: 30px;"/> `NodeJs`
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="height: 30px;"/> `Github`
+  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="height: 30px;"/> `Github`
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="height: 30px;"/>`Figma`
+  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="height: 30px;"/>`Figma`
 
-  </br>
+</br>
 
 ## Banco de dados
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" style="height: 30px;"/> Firebase 
 
 </br>
 
-
 ## Aplicação
 
 ![Localhost]![AppPort]
 
+</br>
+
+## Fluxograma
+<img src="./logo/fluxograma.jpeg">
+
+</br>
+
 ## Protótipo
 Iniciamos o protótipo no figma, fizemos a elaboração do layout de acordo ao desafio proposto pela odontoprev.
-** pendente incluir arquivos **
+
+</br>
 
 ## Contribuindo
 
@@ -75,6 +86,8 @@ Iniciamos o protótipo no figma, fizemos a elaboração do layout de acordo ao d
 4. Faça um push para a branch (`git push origin feature/newFeature`)
 5. Abra um pull request 
 
+</br>
+
 ## Contato
 
 * Alana Cardoso: [Linkedin](https://www.linkedin.com/in/alana-karine/) | [GitHub](https://github.com/AlanaK2)
@@ -82,7 +95,7 @@ Iniciamos o protótipo no figma, fizemos a elaboração do layout de acordo ao d
 * Ellen Cavalcante: [Linkedin](https://www.linkedin.com/in/ellencavalcantebrito/) | [GitHub](https://github.com/EllenCavalcanteBrito)
 * Gleyciane Macena [Linkedin](https://www.linkedin.com/in/gleyciane-macena-costa/) | [GitHub](https://github.com/Gleyciane-Macena)
 * Nathalia Rigo: [Linkedin](https://www.linkedin.com/in/nathaliarigo/) | [GitHub](https://github.com/ncrigo)
-* Thaina Prado [Linkedin](https://www.linkedin.com/in/thaina-prado-893b3b102/) | [GitHub](https://github.com/Thainaprado7)
+* Thaina Prado: [Linkedin](https://www.linkedin.com/in/thaina-prado-893b3b102/) | [GitHub](https://github.com/Thainaprado7)
 
 [⬆ Voltar ao topo](README_Template.md)<br>
 
