@@ -84,7 +84,7 @@ O projeto pode ser utilizado em qualquer sistema operacional.
 
 ## Contato
 
-* Alana Cardoso: [Linkedin](https:www.linkedin.com/in/alana-karine) | [GitHub](https:https://github.com/AlanaK2)
+* Alana Cardoso: [Linkedin](https://www.linkedin.com/in/alana-karine/) | [GitHub](https://github.com/AlanaK2)
 * Barbara Scatolin: [Linkedin](https://www.linkedin.com/in/barbara-scatolin/) | [GitHub](https://github.com/oxibarbara)
 * Ellen Cavalcante: [Linkedin](https://www.linkedin.com/in/ellencavalcantebrito/) | [GitHub](https://github.com/EllenCavalcanteBrito)
 * Gleyciane Macena [Linkedin](https://www.linkedin.com/in/gleyciane-macena-costa/) | [GitHub](https://github.com/Gleyciane-Macena)
