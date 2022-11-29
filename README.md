@@ -11,7 +11,7 @@
 
   <p align="center">
     <br />
-    <a href="http://git.odontoprev.com.br/arquitetura/arquitetura-padroes/"><strong>Explore o projeto »</strong></a>
+    <a href="https://ellencavalcantebrito.github.io/TF_odontoprev/"><strong>Explore o projeto »</strong></a>
 
   <br>
   
@@ -64,7 +64,8 @@ E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008
 ![Localhost]![AppPort]
 
 ## Protótipo
-
+Iniciamos o protótipo no figma, fizemos a elaboração do layout de acordo ao desafio proposto pela odontoprev.
+** pendente incluir arquivos **
 
 ## Contribuindo
 
