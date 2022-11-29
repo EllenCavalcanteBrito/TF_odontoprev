@@ -66,9 +66,6 @@ E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008
 ## Protótipo
 
 
-## Utilizado por
-O projeto pode ser utilizado em qualquer sistema operacional.
-
 ## Contribuindo
 
 1. Solicite a mudança ao time responsavel 
