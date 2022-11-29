@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^25.3.0",
     "firebase": "^9.4.0",
+
     "gh-pages": "^4.0.0",
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
