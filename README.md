@@ -69,7 +69,7 @@ E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008
 </br>
 
 ## Fluxograma
-<img src="./logo/fluxograma.jpeg">
+<img src="./src/logo/fluxograma.jpeg">
 
 </br>
 
