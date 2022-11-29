@@ -1,9 +1,5 @@
-import login from "./pages/login.js"
-<<<<<<< HEAD
+import login from "./pages/login/login.js"
 import register from "./pages/register/register.js"
-=======
-import register from "./pages/register.js"
->>>>>>> 07b2b3b16f90a474ebf687206a32c4b08b90d9fc
 
 const main = document.querySelector('#root');
 
