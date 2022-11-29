@@ -15,8 +15,8 @@ export default () => {
           </label>
         </div>
           <input id="inputPassword" class="inputPassword" type="password" placeholder="Senha" name="password" required>
-        <div class="esqueci"><p>  Esqueci minha senha <a href="#" id="esqueci"></p></div>
-        <button type="button" id="button-enter" class="button-enter">Entrar</button>
+          <span id="recover" class"esqueci"><u>Esqueci a senha 😰</u></span>
+          <button type="button" id="button-enter" class="button-enter">Entrar</button>
         <div id="print-error-here"></div> 
         <p>Não tem uma conta? <a href="#register" id="signUp" class="conta"> Cadastre-se! </p></div>
       </div>
@@ -27,6 +27,7 @@ export default () => {
 container.innerHTML = template;
 
 const buttonEnter = container.querySelector('#button-enter');
+const buttonRecover = container.querySelector('#recover');
 const printError = container.querySelector('#print-error-here');
 const inputEmail = container.querySelector('#inputEmail');
 const inputPassword = container.querySelector('#inputPassword');
@@ -37,8 +38,13 @@ buttonEnter.addEventListener('click', (event) => {
   const email = inputEmail.value;
   const password = inputPassword.value;
   login(email, password)
-    .then(() => {
-      window.location.href = "https://www.odontoprev.com.br/";
+    .then((user) => {
+      if (user.profile === "Beneficiário") {
+        return alert("eu sou beneficiário")
+      } else {
+        alert ("não sou")
+      }
+      //window.location.href = "https://www.odontoprev.com.br/";
     }).catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/invalid-email') {
@@ -56,6 +62,20 @@ buttonEnter.addEventListener('click', (event) => {
 signUp.addEventListener('click', () => {
     window.location.href = '#register';
   });
+
+  buttonRecover.addEventListener('click', (event) => {
+    event.preventDefault();
+    const email = inputEmail.value;
+    firebase.auth().sendPasswordResetEmail(email)
+      .then(() => {
+      }).catch((error) => {
+        const errorCode = error.code;
+        if (errorCode) {
+          printError.innerHTML = "Algo deu errado. Por favor, tente novamente.";
+        }
+      });
+  });
+
 
 return container;
 };
