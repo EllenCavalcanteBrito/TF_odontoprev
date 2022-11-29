@@ -1,4 +1,4 @@
-/* @import url('./pages/xxx/xxx.css'); */
+@import url('./pages/login/login.css');
 @import url('./pages/register/register.css');
 /* @import url('./pages/xxx/xxx.css'); */
 @import url('./pages/patient/patient.css');
@@ -6,7 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;600&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;  
@@ -15,7 +14,7 @@
   }
   
   :root {
-    --white: aliceblue;
+    --white: rgb(255, 255, 255);
     --orange: #ED6B0D;
     --blue: #0165FE;
     --lead: #9A9494;
