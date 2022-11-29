@@ -45,7 +45,7 @@ export default () => {
   const inputUserName = container.querySelector('#nameUser');
   const printError = container.querySelector('#print-error-here');
   const showCredenciado = container.querySelector('#registerInputCro');
-  
+
   function validatePassword() {
     if (
       !inputUserName.value ||
@@ -59,10 +59,16 @@ export default () => {
       const email = inputEmail.value;
       const password = inputPassword.value;
       const userName = inputUserName.value;
+      const cpfCpnjUser = inputData.value;
+      const getProfile = document.querySelector('input[name="typeUser"]:checked').value;
+      const getCro = showCredenciado.value;
       return register(email, password, userName)
         .then((userCredential) => {
           const user = userCredential.user;
-          return user.updateProfile({ displayName: userName });
+          user.updateProfile({ displayName: userName});
+          return firebase.firestore().collection('users').doc(user.uid).set({
+            data: cpfCpnjUser, profile: getProfile, displayName: userName, user:user.uid, Cro: getCro 
+          })
         })
         .then(() => {
           window.location.href = 'https://www.odontoprev.com.br/';
