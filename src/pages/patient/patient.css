@@ -27,21 +27,26 @@
 
 #btn-scheduling{
     border: none;
-    margin-left: 15rem; 
+    margin-left: 13rem; 
 }
 
 #btn-patient-area{
     border: none;
-    margin-left: 24rem;
+    margin-left: 21rem;
 }
 
 #who{
     border: none;
-    margin-left: 32rem;
+    margin-left: 28rem;
 
 }
 
 #help{
+    border: none;
+    margin-left: 34rem;
+}
+
+#exit{
     border: none;
     margin-left: 38rem;
 }
@@ -50,6 +55,7 @@
     display: flex;
     margin-top: 3rem;
     justify-content: center;
+    color: #9A9494;
         
 }
 
@@ -57,8 +63,61 @@
     width: 2rem;
     height: 2rem;
     margin-right: 0.4rem;
+    margin-top: 1rem;
 }
 
 #select-grid{
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
+    background-color: #0165FE;
+    color: white;
+    width: 10rem;
+    height: 2rem;
+    margin-left: 1rem;
 }
+
+.text{
+    font-size: 1rem;
+}
+
+.container-dentists{
+    background-color: #D9D9D9;
+    width: 20rem;
+    height: 12rem;
+    margin-left: 2rem;
+}
+
+.icon-people{
+    width: 1.3rem;
+    height: 1.3rem; 
+    margin-right: 0.4rem;
+}
+
+.info1{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+ }
+
+.icon-document{
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.4rem; 
+}
+
+ .info2{
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+ }
+
+.icon-cro{
+    width: 1.3rem;
+    height: 1.3rem; 
+    margin-right: 0.4rem;
+}
+
+ .info3{
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+ }
