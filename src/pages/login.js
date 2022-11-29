@@ -30,7 +30,7 @@ buttonEnter.addEventListener('click', (event) => {
   const password = inputPassword.value;
   login(email, password)
     .then(() => {
-      window.location.href = "https://www.odontoprev.com.br/";
+      window.location.href = '#patient';
     }).catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/invalid-email') {
