@@ -1,6 +1,6 @@
-import login from "./pages/login.js"
-import register from "./pages/register/register.js"
-import patient from "./pages/patient/patient.js";
+import login from "./pages/login/login.js"
+import register from "../pages/register/register.js"
+import agendaDentista from "../pages/agendaDentista/agendaDentista.js";
 
 const main = document.querySelector('#root');
 
@@ -17,6 +17,11 @@ const init = () => {
       case '#patient':
       main.innerHTML = '';
       main.appendChild(patient());
+      break;
+
+    case '#agendaDentista':
+      main.innerHTML = '';
+      main.appendChild(agendaDentista());
       break;
 
     default: main.appendChild(login());
