@@ -12,7 +12,6 @@ export default () => {
 
           <div class='register-main'>
             <form class='register-form'>
-
               <div class='register-input-radio'>
                 <input id='registerInputBeneficiario' type='radio' name='typeUser' required='required' value='Beneficiário'/>
                 <label>Beneficiário</label>
@@ -20,20 +19,23 @@ export default () => {
                 <label>Credenciado</label>                
               </div>
 
-              <input id='registerInputCro' class='register-input-cro' type='text' placeholder='CRO' maxlength='6'/>
+              <input id='registerInputCro' class='register-input-cro' type='text' placeholder='UF e nº CRO' maxlength='6'/>
 
-              <input id='cpfCpnjUser' class='register-input' type='number' placeholder='CPF ou CNPJ' >
-              <input id='nameUser' class='register-input' type='text' placeholder='Nome Completo' > 
-              <input id='emailUser' class='register-input' type='email' placeholder='E-mail' >
-              <input id='passwordUser' class='register-input' type='password' placeholder='Senha'>
+              <input id='cpfCpnjUser' class='register-input' type='number' placeholder='CPF ou CNPJ' minlength='12' maxlength='14'/>
+              <input id='nameUser' class='register-input' type='text' placeholder='Nome Completo'/> 
+              <input id='emailUser' class='register-input' type='email' placeholder='E-mail'/>
+              <input id='passwordUser' class='register-input' type='password' placeholder='Senha'/>
             
               <div id='print-error-here'></div> 
 
               <button id='button-register' class='button-register' type='button'>CADASTRAR</button>
+            
+              <div class='register-back-login'>Voltar para o <a href="#login" class='register-login'>Login</div>
             </form>
           </div>
         </div>
       `;
+
   container.innerHTML = template;
 
   const beneficiario = container.querySelector('#registerInputBeneficiario');
