@@ -19,13 +19,14 @@
     grid-template-columns: 1;
     text-align: center;
     border-radius: 5px;
-    padding: 40px;  
+    padding: 3rem;  
     width: 25%;
     height: 23vw;
     background-color: var(--blue); 
 }
 .logo-login{
-    width: 60%;
+    width: 20rem;
+    height: 3.5rem;
     margin-top: auto; 
 }
 .msg-login{
@@ -44,8 +45,8 @@
   font-size: 1.3rem;
 }
 .button-enter{
-    width: 9vw;
-    padding: 8px; 
+    width: 100%;
+    height: 90%;
     border-radius: 10px;
     margin-top: 20px;
     font-weight: bold;
@@ -69,7 +70,11 @@
 .conta{
     color: var(--white);
     font-size: 90%;
-    text-decoration: none;
     font-weight: bold;
-
+}
+#print-error-login{
+    margin-top: auto;
+    color: var(--white);   
+    background: red;
+    border-radius: 5px;
 }
