@@ -1,7 +1,7 @@
 import login from "./pages/login/login.js"
 import register from "./pages/register/register.js"
 import patient from "./pages/patient/patient.js"
-import dentistPage from "./pages/agendaDentista/dentistPage.js";
+import agendaDentista from "./pages/agendaDentista/dentistPage.js";
 
 const main = document.querySelector('#root');
 

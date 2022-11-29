@@ -13,7 +13,7 @@ export default () => {
           <input id="inputPassword" class="inputPassword" type="password" placeholder="Senha" name="password" required>
             <span id="recover" class="esqueci">Esqueci a minha senha</span>
         <button type="button" id="button-enter" class="button-enter">Entrar</button>
-        <div id="print-error-login"></div> 
+        <div id="print-error-here"></div> 
         <div class="nconta">
         <p>Não tem uma conta? <a href="#register" id="signUp" class="conta"> Cadastre-se! </p></div>
         </div>      
@@ -26,7 +26,7 @@ container.innerHTML = template;
 
 const buttonEnter = container.querySelector('#button-enter');
 const buttonRecover = container.querySelector('#recover');
-const printError = container.querySelector('#print-error-login');
+const printError = container.querySelector('#print-error-here');
 const inputEmail = container.querySelector('#inputEmail');
 const inputPassword = container.querySelector('#inputPassword');
 const signUp = container.querySelector('#signUp'); 
