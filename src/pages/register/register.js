@@ -71,7 +71,7 @@ export default () => {
           })
         })
         .then(() => {
-          window.location.href = 'https://www.odontoprev.com.br/';
+          window.location.href = '#login';
         })
         .catch((error) => {
           const errorCode = error.code;
