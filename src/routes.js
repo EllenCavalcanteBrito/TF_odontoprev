@@ -1,6 +1,6 @@
-import login from "../src/pages/login.js"
-import register from "../src/pages/register.js"
-import agendaDentista from "../src/pages/agenda-dentista.js";
+import login from "./pages/login/login.js"
+import register from "../pages/register/register.js"
+import agendaDentista from "../pages/agendaDentista/agendaDentista.js";
 
 const main = document.querySelector('#root');
 
