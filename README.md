@@ -7,7 +7,7 @@
     <img src="https://odontoprevsite.com.br/site/wp-content/uploads/2020/11/odontoprev-logo.png" alt="Logo" width="150" height="80">
   </a>
 
-<h3 align="center">Readme - FT Odontoprev</h3>
+<h3 align="center">Telent Fest -  Odontoprev</h3>
 
   <p align="center">
     <br />
@@ -64,13 +64,8 @@ E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008
 ![Localhost]![AppPort]
 
 ## Protótipo
-</br>
 
 
-## Guia de comandos
-
-
----
 ## Utilizado por
 O projeto pode ser utilizado em qualquer sistema operacional.
 
