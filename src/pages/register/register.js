@@ -13,18 +13,50 @@ export default () => {
           <div class='register-main'>
             <form class='register-form'>
               <div class='register-input-radio'>
-                <input id='registerInputBeneficiario' type='radio' name='typeUser' required='required' value='Beneficiário'/>
+                <input id='registerInputBeneficiario' type='radio' name='typeUser' required='required' value='Beneficiário' checked/>
                 <label>Beneficiário</label>
                 <input id='registerInputCredenciado' type='radio' name='typeUser' required='required' value='Credenciado'/>
                 <label>Credenciado</label>                
               </div>
 
-              <input id='registerInputCro' class='register-input-cro' type='text' placeholder='UF e nº CRO' maxlength='6'/>
+              <div id='registerInputCro' class='register-cro'>
+                <select class='btn-select-uf'>
+                  <option value='typeTitle' disabled selected style='display: none'>UF</option>
+                  <option value='AC'>AC</option>
+                  <option value='AL'>AL</option>
+                  <option value='AP'>AP</option>
+                  <option value='AM'>AM</option>
+                  <option value='BA'>BA</option>
+                  <option value='CE'>CE</option>
+                  <option value='DF'>DF</option>
+                  <option value='ES'>ES</option>
+                  <option value='GO'>GO</option>
+                  <option value='MA'>MA</option>
+                  <option value='MT'>MT</option>
+                  <option value='MS'>MS</option>
+                  <option value='MG'>MG</option>
+                  <option value='PA'>PA</option>
+                  <option value='PB'>PB</option>
+                  <option value='PR'>PR</option>
+                  <option value='PE'>PE</option>
+                  <option value='PI'>PI</option>
+                  <option value='RJ'>RJ</option>
+                  <option value='RN'>RN</option>
+                  <option value='RS'>RS</option>
+                  <option value='RO'>RO</option>
+                  <option value='RR'>RR</option>
+                  <option value='SC'>SC</option>
+                  <option value='SP'>SP</option>
+                  <option value='SE'>SE</option>
+                  <option value='TO'>TO</option>
+                </select>
+                <input class='register-input-cro' type='number' placeholder='Nº CRO' maxlength='4'/>
+              </div>
 
-              <input id='cpfCpnjUser' class='register-input' type='number' placeholder='CPF ou CNPJ' minlength='12' maxlength='14'/>
+              <input id='cpfCpnjUser' class='register-input' type='number' placeholder='CPF ou CNPJ' maxlength='14'/>
               <input id='nameUser' class='register-input' type='text' placeholder='Nome Completo'/> 
-              <input id='emailUser' class='register-input' type='email' placeholder='E-mail'/>
-              <input id='passwordUser' class='register-input' type='password' placeholder='Senha'/>
+              <input id='emailUser' class='register-input' type='email' placeholder='E-mail' autocomplete='new-email'/>
+              <input id='passwordUser' class='register-input' type='password' placeholder='Senha' autocomplete='new-password'/>
             
               <div id='print-error-here'></div> 
 
