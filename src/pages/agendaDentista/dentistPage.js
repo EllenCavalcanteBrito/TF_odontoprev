@@ -110,7 +110,7 @@ export default () => {
 
 container.innerHTML = template;
 
-function (nome) {
+function nome (nome) { // confirmar com barbara
   const tbAgendamento = document.getElementById("tb");
   const qtDeHorarios = ["08h", "09h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h"]
 

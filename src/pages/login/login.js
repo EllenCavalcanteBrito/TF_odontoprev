@@ -38,11 +38,11 @@ buttonEnter.addEventListener('click', (event) => {
   login(email, password)
     .then((user) => {
       if (user.profile === "Beneficiário") {
-        return alert("eu sou beneficiário")
+        return window.location.href = '#patient';
       } else {
-        alert ("não sou")
+        alert("Página em contrução")
+        return window.location.href = '#dentistPage';
       }
-      //window.location.href = "https://www.odontoprev.com.br/";
     }).catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/invalid-email') {
