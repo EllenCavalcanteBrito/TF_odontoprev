@@ -14,6 +14,10 @@ const init = () => {
       main.innerHTML = '';
       main.appendChild(register());
       break;
+      case '#patient':
+      main.innerHTML = '';
+      main.appendChild(patient());
+      break;
 
     case '#agendaDentista':
       main.innerHTML = '';
