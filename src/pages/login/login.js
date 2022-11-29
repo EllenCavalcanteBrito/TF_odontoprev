@@ -1,19 +1,27 @@
-import {login} from "../data/authentication.js";
-// import {showErrors} from "../../errors.js";
+import {login} from "../../data/authentication.js";
 
 export default () => {
     const container = document.createElement('div');
-    const template = `  <div class="container-login">
-          <div class="form">
-          <input id="inputEmail" type="email" placeholder="E-mail" name="email" required>
-          <input id="inputPassword" type="password" placeholder="Senha" name="password" required>
-          <button type="button" id="button-enter">Entrar</button>
-          </div>
-
-          <div id="print-error-here"></div> 
-
-          <p>Não tem uma conta? <a href="#register" id="signUp"> Cadastre-se! </p>
+    const template = `  
+    <div class="container-login">
+      <div class="logo">
+        <img src="./logo/logo_odontoprev_azul_fundo_branco.jpg" class="logo-login">
+        <h1 class="msg-login">Faça seu login</h1>
+      </div>
+      <div class="form">
+        <div>
+          <label class="login-label" id="loginLabel" for="email">  
+            <input id="inputEmail" class="inputEmail" type="email" placeholder=" E-mail" name="email" required>
+          </label>
         </div>
+          <input id="inputPassword" class="inputPassword" type="password" placeholder="Senha" name="password" required>
+        <div class="esqueci"><p>  Esqueci minha senha <a href="#" id="esqueci"></p></div>
+        <button type="button" id="button-enter" class="button-enter">Entrar</button>
+        <div id="print-error-here"></div> 
+        <p>Não tem uma conta? <a href="#register" id="signUp" class="conta"> Cadastre-se! </p></div>
+      </div>
+
+    </div>
       `;
 
 container.innerHTML = template;

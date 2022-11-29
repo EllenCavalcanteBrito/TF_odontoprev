@@ -1,4 +1,4 @@
-import login from "./pages/login.js"
+import login from "./pages/login/login.js"
 import register from "./pages/register/register.js"
 
 const main = document.querySelector('#root');

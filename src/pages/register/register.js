@@ -45,7 +45,7 @@ export default () => {
   const inputUserName = container.querySelector('#nameUser');
   const printError = container.querySelector('#print-error-here');
   const showCredenciado = container.querySelector('#registerInputCro');
-
+  
   function validatePassword() {
     if (
       !inputUserName.value ||
