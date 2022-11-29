@@ -36,8 +36,13 @@ buttonEnter.addEventListener('click', (event) => {
   const email = inputEmail.value;
   const password = inputPassword.value;
   login(email, password)
-    .then(() => {
-      window.location.href = "https://www.odontoprev.com.br/";
+    .then((user) => {
+      if (user.profile === "Beneficiário") {
+        return alert("eu sou beneficiário")
+      } else {
+        alert ("não sou")
+      }
+      //window.location.href = "https://www.odontoprev.com.br/";
     }).catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/invalid-email') {
@@ -68,6 +73,20 @@ buttonRecover.addEventListener('click', (event) => {
 signUp.addEventListener('click', () => {
     window.location.href = '#register';
   });
+
+  buttonRecover.addEventListener('click', (event) => {
+    event.preventDefault();
+    const email = inputEmail.value;
+    firebase.auth().sendPasswordResetEmail(email)
+      .then(() => {
+      }).catch((error) => {
+        const errorCode = error.code;
+        if (errorCode) {
+          printError.innerHTML = "Algo deu errado. Por favor, tente novamente.";
+        }
+      });
+  });
+
 
 return container;
 };
