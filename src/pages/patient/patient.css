@@ -25,11 +25,30 @@
   font-size: 1rem;
 }
 
+.containerDentists{
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  margin-top: 3rem;
+}
+
 .container-dentists {
   background-color: #d9d9d9;
-  width: 20rem;
-  height: 12rem;
+  width: 17rem;
+  height: 23rem;
   margin-left: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.txt-dentists{
+  width: 17rem;
+  height: 8rem;
+  text-align: center;
 }
 
 .icon-people {
@@ -56,14 +75,43 @@
   font-size: 0.8rem;
 }
 
-.icon-cro {
-  width: 1.3rem;
-  height: 1.3rem;
-  margin-right: 0.4rem;
+.avaliable{
+  background-color: #d9d9d9;
+  text-align: center;
+  margin-top: 1.5rem;
+  
 }
 
-.info3 {
-  padding-top: 0.8rem;
-  padding-left: 1rem;
-  font-size: 0.8rem;
+.avaliable-text{
+  background-color: #BEC7BC;
+  width: 20rem;
+  height: 1rem;
+  margin-top: 2.5rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.txt{
+  font-weight: bold;
+  text-align: center;
+}
+
+.select-avaliable{
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.btn-mark{
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.btnMark{
+  background-color: #4CD729;
+  color:white;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }

@@ -42,17 +42,20 @@ export default () => {
             printAqui.innerHTML = dentistas.map((item) => {  
             return `       
           <div class='container-dentists'>
-            <p class='info1'><img class='icon-people' src='./icon/usuario.png' alt='icon people'>Nome do profissional:${item.displayName}</p>
-            <p class='info2'><img class='icon-document' src='./icon/document-writer.png' alt='icon document'>CNPJ:${item.data}</p>
-            
-            <div  id="btn-${item.user}">
-            <button data-edit=${item.user}>Agendar consulta</button>
+              <div class='txt-dentists'>
+              <p class='info1'><img class='icon-people' src='./icon/usuario.png' alt='icon people'>Dentista: ${item.displayName}</p>
+              <p class='info2'><img class='icon-document' src='./icon/document-writer.png' alt='icon document'>CNPJ: ${item.data}</p>
             </div>
-
-            <div class="getAgenda" id="getAgenda-${item.user}" style="display:none"> 
-            <input type="date" id="getData-${item.user}" value="2022-11-30" min="2022-11-30" max="2022-12-20"> 
-            <input type="time" id="getHour-${item.user}" min="09:00" max="18:00">
-            <button data-save=${item.user}>Ok</button>
+            <div class='avaliable-text'>
+              <p class='txt'>Agenda disponível</p>
+            </div>
+            <div class='avaliable'>
+              <input type='radio' name='data-hora' class='select-avaliable' value='first'>05/11/2022 - 09:00h</input><br>
+              <input type='radio' name='data-hora' class='select-avaliable' value='second'>05/11/2022 - 15:00h</input><br>
+              <input type='radio' name='data-hora' class='select-avaliable' value='third'>07/11/2022 - 08:45h</input><br>
+            </div>
+            <div class='btn-mark' id="btn-${item.user}">
+              <button class= 'btnMark' data-edit=${item.user}>Agendar consulta</button>
             </div>
 
           </div>
