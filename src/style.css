@@ -2,7 +2,7 @@
 @import url('./pages/register/register.css');
 @import url('./pages/header/header.css');
 @import url('./pages/patient/patient.css');
-
+@import url('./pages/patient/warning.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;600&display=swap');
 
 * {
