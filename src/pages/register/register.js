@@ -50,10 +50,10 @@ export default () => {
                   <option value='SE'>SE</option>
                   <option value='TO'>TO</option>
                 </select>
-                <input class='register-input-cro' type='number' placeholder='Nº CRO' maxlength='4'/>
+                <input class='register-input-cro' type='number' placeholder='Nº CRO'/>
               </div>
 
-              <input id='cpfCpnjUser' class='register-input' type='number' placeholder='CPF ou CNPJ' maxlength='14'/>
+              <input id='cpfCpnjUser' class='register-input' type='number' placeholder='CPF ou CNPJ'/>
               <input id='nameUser' class='register-input' type='text' placeholder='Nome Completo'/> 
               <input id='emailUser' class='register-input' type='email' placeholder='E-mail' autocomplete='new-email'/>
               <input id='passwordUser' class='register-input' type='password' placeholder='Senha' autocomplete='new-password'/>

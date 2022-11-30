@@ -9,9 +9,9 @@ export default () => {
           <h1 class='msg-login'>Faça seu login</h1>
         </div>
 
-        <form class='login-form' autocomplete="false">
-          <input id='inputEmail' class='inputEmail' type='email' placeholder='E-mail' autocomplete='new-email'/>
-          <input id='inputPassword' class='inputPassword' type='password' placeholder='Senha' autocomplete='new-password'/>
+        <form class='login-form'>
+          <input id='inputEmail' class='inputEmail' type='email' placeholder='E-mail'/>
+          <input id='inputPassword' class='inputPassword' type='password' placeholder='Senha'/>
           <span id='recover' class='esqueci'>Esqueci a minha senha</span>
           <button type='button' id='button-enter' class='button-enter'>Entrar</button>
 
@@ -32,6 +32,9 @@ const printError = container.querySelector('#print-error-login');
 const inputEmail = container.querySelector('#inputEmail');
 const inputPassword = container.querySelector('#inputPassword');
 const signUp = container.querySelector('#signUp'); 
+
+// inputEmail.value = '';
+// inputPassword.value = ' ';
 
 buttonEnter.addEventListener('click', (event) => {
   event.preventDefault();
