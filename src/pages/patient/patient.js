@@ -87,9 +87,9 @@ export default () => {
         });
 
           btnSelect.addEventListener('change', getDentistas)
+        
+        return container;
+      };
 
-  return container;
-};
     
-     // const containerDentists = container.querySelector('#containerDentists');
-      // containerDentists.appendChild(dentists);
+

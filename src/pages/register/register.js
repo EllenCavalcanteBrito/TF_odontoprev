@@ -60,13 +60,20 @@ export default () => {
         
           <div id='print-error-here'></div> 
 
-          <button id='button-register' class='button-register' type='button'>CADASTRAR</button>
-        
-          <div class='register-back-login'>Voltar para o <a href='#login' class='register-login'>Login</div>
-        </form>
-      </div>
-    </div>
-  `;
+              <input id='cpfCpnjUser' class='register-input' type='number' placeholder='CPF ou CNPJ' minlength='12' maxlength='14'/>
+              <input id='nameUser' class='register-input' type='text' placeholder='Nome Completo'/> 
+              <input id='emailUser' class='register-input' type='email' placeholder='E-mail' autocomplete="off" />
+              <input id='passwordUser' class='register-input' type='password' placeholder='Senha' autocomplete="off"/>
+            
+              <div id='print-error-here'></div> 
+
+              <button id='button-register' class='button-register' type='button'>CADASTRAR</button>
+            
+              <div class='register-back-login'>Voltar para o <a href="#login" class='register-login'>Login</div>
+            </form>
+          </div>
+        </div>
+      `;
 
   container.innerHTML = template;
 
