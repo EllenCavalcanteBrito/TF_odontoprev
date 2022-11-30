@@ -24,59 +24,42 @@ export default () => {
       </div>
     `;
 
-container.innerHTML = template;
+  container.innerHTML = template;
 
-const buttonEnter = container.querySelector('#button-enter');
-const buttonRecover = container.querySelector('#recover');
-const printError = container.querySelector('#print-error-login');
-const inputEmail = container.querySelector('#inputEmail');
-const inputPassword = container.querySelector('#inputPassword');
-const signUp = container.querySelector('#signUp'); 
+  const buttonEnter = container.querySelector('#button-enter');
+  const buttonRecover = container.querySelector('#recover');
+  const printError = container.querySelector('#print-error-login');
+  const inputEmail = container.querySelector('#inputEmail');
+  const inputPassword = container.querySelector('#inputPassword');
+  const signUp = container.querySelector('#signUp'); 
 
-// inputEmail.value = '';
-// inputPassword.value = ' ';
+  // inputEmail.value = '';
+  // inputPassword.value = ' ';
 
-buttonEnter.addEventListener('click', (event) => {
-  event.preventDefault();
-  const email = inputEmail.value;
-  const password = inputPassword.value;
-  login(email, password)
-    .then((user) => {
-      if (user.profile === 'Beneficiário') {
-        return window.location.href = '#patient';
-      } else {
-        alert('Página em contrução')
-        return window.location.href = '#dentistPage';
-      }
-    }).catch((error) => {
-      const errorCode = error.code;
-      if (errorCode === 'auth/invalid-email') {
-        printError.innerHTML = 'Endereço de email não é válido';
-      } else if (errorCode === 'auth/user-not-found') {
-        printError.innerHTML = 'Não há nenhum usuário correspondente ao e-mail fornecido.';
-      } else if (errorCode === 'auth/wrong-password') {
-        printError.innerHTML = 'A senha é inválida para o e-mail fornecido.';
-      } else {
-        printError.innerHTML = 'Algo deu errado. Por favor, tente novamente.';
-      }
-    });
-});
-
-buttonRecover.addEventListener('click', (event) => {
-  event.preventDefault();
-  const email = inputEmail.value;
-  firebase.auth().sendPasswordResetEmail(email)
-    .then(() => {
-    }).catch((error) => {
-      const errorCode = error.code;
-      if (errorCode) {
-        printError.innerHTML = 'Algo deu errado. Por favor, tente novamente.';
-      }
-    });
-});
-
-signUp.addEventListener('click', () => {
-    window.location.href = '#register';
+  buttonEnter.addEventListener('click', (event) => {
+    event.preventDefault();
+    const email = inputEmail.value;
+    const password = inputPassword.value;
+    login(email, password)
+      .then((user) => {
+        if (user.profile === 'Beneficiário') {
+          return window.location.href = '#patient';
+        } else {
+          alert('Página em contrução')
+          return window.location.href = '#dentistPage';
+        }
+      }).catch((error) => {
+        const errorCode = error.code;
+        if (errorCode === 'auth/invalid-email') {
+          printError.innerHTML = 'Endereço de email não é válido';
+        } else if (errorCode === 'auth/user-not-found') {
+          printError.innerHTML = 'Não há nenhum usuário correspondente ao e-mail fornecido.';
+        } else if (errorCode === 'auth/wrong-password') {
+          printError.innerHTML = 'A senha é inválida para o e-mail fornecido.';
+        } else {
+          printError.innerHTML = 'Algo deu errado. Por favor, tente novamente.';
+        }
+      });
   });
 
   buttonRecover.addEventListener('click', (event) => {
@@ -92,5 +75,9 @@ signUp.addEventListener('click', () => {
       });
   });
 
-return container;
+  signUp.addEventListener('click', () => {
+      window.location.href = '#register';
+    });
+
+  return container;
 };
