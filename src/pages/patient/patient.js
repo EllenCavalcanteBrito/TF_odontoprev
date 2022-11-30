@@ -7,8 +7,6 @@ export default () => {
         <div class='navbar'>
           <button id= 'btn-scheduling' class='btns-navbar'>Agendar consultas </button>
           <button id= 'btn-warning' class='btns-navbar'>Avisos </button>
-          <div class= 'containerWarning'>
-          </div>
           <button id= 'who' class='btns-navbar'>Quem somos</button>
           <button id= 'help' class='btns-navbar'>Ajuda</button>
           <button id= 'exit' class='btns-navbar'>Sair</button>
@@ -60,6 +58,11 @@ export default () => {
           </div>
           `;
         });
+
+        const btnWarning = container.querySelector('#btn-warning');
+    btnWarning.addEventListener('click', () => {
+      window.location.hash = '#warning';
+    });
 
         return container;
       };
