@@ -1,0 +1,51 @@
+.patient-header{
+  background-color:red;
+  max-width: 100%;
+  height: 4.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-odontoprev{
+  width: 18rem;
+  height: 3.1rem;
+  position: absolute;
+  left: 1.8rem;
+}
+
+.btns-navbar{
+  background-color: #0165FE;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: white;
+  display: inline-block;
+  justify-content: space-between;
+  position: absolute;
+}
+
+#btn-scheduling{
+  border: none;
+  margin-left: 17rem; 
+}
+
+#btn-warning{
+  border: none;
+  margin-left: 24.3rem;
+}
+
+#who{
+  border: none;
+  margin-left: 28rem;
+
+}
+
+#help{
+  border: none;
+  margin-left: 34rem;
+}
+
+#exit{
+  border: none;
+  margin-left: 38rem;
+}
