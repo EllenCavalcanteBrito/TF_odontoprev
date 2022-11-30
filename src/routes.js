@@ -29,6 +29,7 @@ const init = () => {
       break;
     case '#warning':
       main.innerHTML = '';
+      main.appendChild(header());
       main.appendChild(warning());
       break;
 
