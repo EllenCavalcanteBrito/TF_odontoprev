@@ -7,7 +7,7 @@ export default () => {
 
       <div class='navbar'>
         <button id= 'btn-scheduling' class='btns-navbar'>Agendar consultas </button>
-        <button id= 'btn-warning' class='btns-navbar'>Avisos </button>
+        <button id= 'btn-warning' class='btns-navbar'>Minhas consultas</button>
         <button id= 'who' class='btns-navbar'>Quem somos</button>
         <button id= 'help' class='btns-navbar'>Ajuda</button>
         <button id= 'exit' class='btns-navbar'>Sair</button>
