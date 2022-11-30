@@ -1,5 +1,5 @@
 export default () => {
-  const container = document.createElement("div");
+  const container = document.createElement('div');
 
   const template = `
     <div class='warning-body'>
@@ -11,12 +11,12 @@ export default () => {
 
   container.innerHTML = template;
 
-  const warningPage = container.querySelector("#warning");
-  window.location.href = "#warning";
+  const warningPage = container.querySelector('#warning');
+  window.location.href = '#warning';
 
-  const btnBack = container.querySelector(".btn-back");
-  btnBack.addEventListener("click", () => {
-    window.location.hash = "#patient";
+  const btnBack = container.querySelector('.btn-back');
+  btnBack.addEventListener('click', () => {
+    window.location.hash = '#patient';
   });
 
   return container;
