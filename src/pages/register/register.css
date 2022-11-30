@@ -44,11 +44,12 @@
 .register-cro {
   display: flex;
   display: none;
+  align-items: center;
 }
 
 .register-input-cro {
   float: right;
-  width: 15rem;
+  width: 14rem;
 }
 
 .register-input,

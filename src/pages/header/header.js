@@ -1,5 +1,5 @@
 export default () => {
-  const containerHeader = document.createElement("div");
+  const containerHeader = document.createElement('div');
 
   const header = `
     <div class='patient-header'>
@@ -17,26 +17,26 @@ export default () => {
 
   containerHeader.innerHTML = header;
 
-  const btnWho = containerHeader.querySelector("#who");
-  btnWho.addEventListener("click", () => {
+  const btnWho = containerHeader.querySelector('#who');
+  btnWho.addEventListener('click', () => {
     window.location.href =
-      "https://www.odontoprev.com.br/quem-somos/nossa-estrutura";
+      'https://www.odontoprev.com.br/quem-somos/nossa-estrutura';
   });
 
-  const btnExit = containerHeader.querySelector("#exit");
-  btnExit.addEventListener("click", () => {
-    window.location.hash = "#login";
+  const btnExit = containerHeader.querySelector('#exit');
+  btnExit.addEventListener('click', () => {
+    window.location.hash = '#login';
   });
 
-  const btnHelp = containerHeader.querySelector("#help");
-  btnHelp.addEventListener("click", () => {
+  const btnHelp = containerHeader.querySelector('#help');
+  btnHelp.addEventListener('click', () => {
     window.location.href =
-      "https://beneficiario.odontoprev.com.br/perguntas-frequentes";
+      'https://beneficiario.odontoprev.com.br/perguntas-frequentes';
   });
 
-  const btnWarning = containerHeader.querySelector("#btn-warning");
-  btnWarning.addEventListener("click", () => {
-    window.location.hash = "#warning";
+  const btnWarning = containerHeader.querySelector('#btn-warning');
+  btnWarning.addEventListener('click', () => {
+    window.location.hash = '#warning';
   });
 
   return containerHeader;
