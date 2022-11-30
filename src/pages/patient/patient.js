@@ -8,7 +8,7 @@ export default () => {
         <p class='text'> Marque sua consulta 
         <br> em poucos passos: </p>
         <select name='rede-credenciada' id='select-grid'>
-          <option value> Rede credenciada </option>
+          <option class='option' value> Rede credenciada </option>
           <option value='Centro-Oeste'>Centro-Oeste</option>
           <option value='Nordeste'>Nordeste</option>
           <option value='Norte'>Norte</option>
@@ -88,9 +88,10 @@ export default () => {
             })
           }
         });
-
-          btnSelect.addEventListener('change', getDentistas)
         
+          btnSelect.addEventListener('change', getDentistas)
+      
+
         return container;
       };
 
