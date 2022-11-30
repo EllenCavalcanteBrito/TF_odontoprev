@@ -31,11 +31,7 @@
 .register-form {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-}
-
-.register-input-cro {
-  display: none;
+  padding: 3rem;  
 }
 
 .register-input-radio {
@@ -45,8 +41,19 @@
   text-align: center;
 }
 
-.register-input,
+.register-cro {
+  display: flex;
+  display: none;
+  align-items: center;
+}
+
 .register-input-cro {
+  float: right;
+  width: 14rem;
+}
+
+.register-input,
+.register-input-cro, .btn-select-uf {
   border-radius: 0.3rem;
   margin-bottom: 1rem;
   padding: 0.5rem;
@@ -65,10 +72,10 @@
   border-radius: 0.5rem;
   font-weight: bold;
   padding: 0.7rem;
+  font-size: 1rem;
 }
 
 .register-input,
-.register-input-cro,
 .button-register {
   width: 20rem;
 }
