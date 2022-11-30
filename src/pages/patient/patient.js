@@ -22,35 +22,32 @@ export default () => {
   
   container.innerHTML = template;
 
-  const printAqui = container.querySelector('.containerDentists');
-    const btnSelect = container.querySelector('#select-grid');
-    const db = firebase.firestore();
-    // 
-    // console.log(userName);
+  const containerDentist = container.querySelector('.containerDentists');
+  const btnSelect = container.querySelector('#select-grid');
+  const db = firebase.firestore();
 
-    function getDentistas (){
+    function getDentist (){
           db.collection('users').where('profile', '==', 'Credenciado').get()
           .then(snapshot => {
-            const dentistas = []
+            const dentist = []
             snapshot.docs.forEach(doc => { 
-              dentistas.push(doc.data());
-              // console.log(doc.data())
+              dentist.push(doc.data());
               })       
-              return dentistas       
+              return dentist       
           })
-          .then(dentistas => {
-            printAqui.innerHTML = dentistas.map((item) => {  
+          .then(dentist => {
+            containerDentist.innerHTML = dentist.map((item) => {  
             return `       
           <div class='container-dentists'>
             <p class='info1'><img class='icon-people' src='./icon/usuario.png' alt='icon people'>Nome do profissional:${item.displayName}</p>
             <p class='info2'><img class='icon-document' src='./icon/document-writer.png' alt='icon document'>CNPJ:${item.data}</p>
             
             <div  id="btn-${item.user}">
-            <button data-edit=${item.user}>Agendar consulta</button>
+            <button data-confirm=${item.user}>Agendar consulta</button>
             </div>
 
             <div class="getAgenda" id="getAgenda-${item.user}" style="display:none"> 
-            <input type="date" id="getData-${item.user}" value="2022-11-30" min="2022-11-30" max="2022-12-20"> 
+            <input type="date" id="getDate-${item.user}" value="2022-11-30" min="2022-11-30" max="2022-12-20"> 
             <input type="time" id="getHour-${item.user}" min="09:00" max="18:00">
             <button data-save=${item.user}>Ok</button>
             </div>
@@ -60,33 +57,46 @@ export default () => {
               });
           })
         }
-
-        printAqui.addEventListener('click', (e) => {
-          const botao = e.target.dataset.edit;
+       
+        containerDentist.addEventListener('click', (e) => {
+          const btnConfirm = e.target.dataset.confirm;
       
-          if (botao) {
-            printAqui.querySelector(`#getAgenda-${botao}`).removeAttribute('style');
-            printAqui.querySelector(`#btn-${botao}`).style.display = 'none';
+          if (btnConfirm) {
+            containerDentist.querySelector(`#getAgenda-${btnConfirm}`).removeAttribute('style');
+            containerDentist.querySelector(`#btn-${btnConfirm}`).style.display = 'none';
           }
         });
+        
 
-        printAqui.addEventListener('click', (e) => {
+        containerDentist.addEventListener('click', (e) => {
           const saveData = e.target.dataset.save;
       
           if (saveData) {
-            const getData = printAqui.querySelector(`#getData-${saveData}`).value;
-            const getHour = printAqui.querySelector(`#getHour-${saveData}`).value;
-            const namePaciente = () => firebase.auth().currentUser.displayName;
-            console.log(namePaciente());
-            firebase.firestore().collection('users').doc(saveData).update({ Calendar: getData, Hour: getHour, Pacient: namePaciente()})
+
+            const getDate = containerDentist.querySelector(`#getDate-${saveData}`).value;
+            const getHour = containerDentist.querySelector(`#getHour-${saveData}`).value;
+     
+            const namePatient = firebase.auth().currentUser.displayName;
+            const uidPatient = firebase.auth().currentUser.uid;
+
+            firebase.firestore().collection('agenda')
+            .add(
+              { 
+                Date: getDate, 
+                Hour: getHour, 
+                Status: 'Pendente', 
+                uidDentist: saveData, 
+                Patient: namePatient,
+                uidPatient: uidPatient,
+              })
             .then(() => {
-              printAqui.querySelector(`#getAgenda-${saveData}`).style.display = 'none';
-              printAqui.querySelector(`#btn-${saveData}`).removeAttribute('style');
+              containerDentist.querySelector(`#getAgenda-${saveData}`).style.display = 'none';
+              containerDentist.querySelector(`#btn-${saveData}`).removeAttribute('style');
             })
           }
         });
 
-          btnSelect.addEventListener('change', getDentistas)
+          btnSelect.addEventListener('change', getDentist)
         
         return container;
       };
