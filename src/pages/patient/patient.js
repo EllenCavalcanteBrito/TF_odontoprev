@@ -18,27 +18,11 @@ export default () => {
       </div>
       <section class='containerDentists'></section>
     </div>
-    `;
-    container.innerHTML = template;
-    const patientArea = container.querySelector('#patient');
-    window.location.href = '#patient';
-    
-    const btnWho = container.querySelector('#who');
-    btnWho.addEventListener('click', () => {
-      window.location.href = 'https://www.odontoprev.com.br/quem-somos/nossa-estrutura';
-    });
-    
-    const btnExit = container.querySelector('#exit');
-    btnExit.addEventListener('click', () => {
-      window.location.hash = '#login';
-    });
-        
-    const btnHelp = container.querySelector('#help');
-    btnHelp.addEventListener('click', () => {
-      window.location.href = 'https://beneficiario.odontoprev.com.br/perguntas-frequentes';
-    });
+  `;
+  
+  container.innerHTML = template;
 
-    const printAqui = container.querySelector('.containerDentists');
+  const printAqui = container.querySelector('.containerDentists');
     const btnSelect = container.querySelector('#select-grid');
     const db = firebase.firestore();
     // 
@@ -103,7 +87,6 @@ export default () => {
         });
 
           btnSelect.addEventListener('change', getDentistas)
-
         
         return container;
       };
