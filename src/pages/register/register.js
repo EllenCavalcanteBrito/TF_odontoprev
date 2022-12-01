@@ -108,9 +108,9 @@ export default () => {
           const user = userCredential.user;
           user.updateProfile({ displayName: userName });
           return firebase.firestore().collection('users').doc(user.uid).set({
-            data: cpfCpnjUser,
-            profile: getProfile,
-            displayName: userName,
+            Data: cpfCpnjUser,
+            Profile: getProfile,
+            DisplayName: userName,
             user: user.uid,
             Cro: getCro,
           });

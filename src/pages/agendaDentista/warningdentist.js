@@ -1,79 +1,80 @@
 export default () => {
-    const container = document.createElement('div');
+  const container = document.createElement('div');
   
-    const template = ` 
-      <div class='pending-body'>
-        <div class='consulta-pendente'>
-          <h1> Consultas pendentes</h1>
-        </div>
-                <section class='containerPending'></section>
+  const template = `
+    <div class='patient-body'>
+      <div id='form-options'>
+        <img class='icon-calendar' src='./icon/icons8-calendar-64 (2).png' alt='icon calendar'>
+        <p class='text'> Marque sua consulta 
+        <br> ou veja seus agendamentos: </p>
+        <button id='btScheduling'>Agendamentos</button>
+        <select name='rede-credenciada' id='select-grid'>
+          <option value> Rede credenciada </option>
+          <option value='Centro-Oeste'>Centro-Oeste</option>
+          <option value='Nordeste'>Nordeste</option>
+          <option value='Norte'>Norte</option>
+          <option value='Sudeste'>Sudeste</option>
+          <option value='Sul'>Sul</option>
+        </select>
       </div>
-    `;
+      <section class='containerDentists'></section>
+    </div>
+  `;
   
-    container.innerHTML = template;
-  
-    const printAqui = container.querySelector('.containerPending');
-    const db = firebase.firestore();
-    // 
-    // console.log(userName);
+  container.innerHTML = template;
 
-    function getPending (){
-          db.collection('users').where('profile', '==', 'Credenciado').get()
-          .then(snapshot => {
-            const pending = []
-            snapshot.docs.forEach(doc => { 
-                pending.push(doc.data());
-              // console.log(doc.data())
-              })       
-              return pending       
-          })
-          .then(pending => {
-            printAqui.innerHTML = pending.map((item) => {  
-            return `       
-                <div class='containerPending'>
-                  <div class='notePending'>
-                    <p class='info1'>Beneficiário: ${item.Pacient}</p>
-                    <p>Data: ${item.Calendar}</p>
-                    <p>Hora: ${item.Hour}</p>
+  const containerDentist = container.querySelector('.containerDentists'); 
+  const btnScheduling = container.querySelector('#btScheduling');
+  const db = firebase.firestore();
 
-                    <div id="btn">
-                        <div  id="btnAcept-${item.user}">
-                            <button data-acept=${item.user}></button>
-                        </div>
-                        <div  id="btnDeny-${item.user}">
-                            <button data-deny=${item.user}></button>
-                        </div>
+
+          function getScheduling (){
+            const uidDentist = firebase.auth().currentUser.uid;
+                db.collection('agenda').where('uidDentist', '==', uidDentist).get()
+                .then(snapshot => {
+                  const scheduling = []
+                  snapshot.docs.forEach(doc => { 
+                    scheduling.push(doc.data());
+                    })       
+                    return scheduling       
+                })
+                .then(scheduling => {
+                  containerDentist.innerHTML = scheduling.map((item) => {  
+                  return `       
+                  <div class='warning-body'>
+                  <section class= 'container-warning'>
+                    <div class='infos'>
+                      <p class='txt-status'>Status da consulta:</p>
+                      <div class='ipt-situation'>${item.Status}</div>
+                      <p class='txt-status'>Data do agendamento: ${item.Date}</p>
+                      <p class='txt-status'>Data do agendamento: ${item.Patient}</p>
+                      <p class='warning'>Qualquer dúvida entre em contato <br>pelo site através do <a class='link' href='https://beneficiario.odontoprev.com.br/fale-conosco'>fale conosco.</a></p>
                     </div>
-                  </div>  
-                </div>
-                  `;
-              });
-          })
-        }
+                    <div class='confirmation'>
+                     <button class='btn-back'>Voltar</button>
+                    </div>
+                  </section>
+                </div>    
+              `;
+                    })
+                    .join('')
+                })
+              }
+              
+              btnScheduling.addEventListener('click', getScheduling)
 
-       /* const btnAcept = container.querySelector('#getAcept');
-        const btnDeny = container.querySelector('#getDeny');
+        return container;
+      };
 
-        printAqui.addEventListener('click', (e) => {
-          const botao = e.target.dataset.save;
-      
-          if (botao) {
-            const getAcept = printAqui.querySelector(`#getAcept-${botao}`).value;
-            const getDeny = printAqui.querySelector(`#getDeny-${botao}`).value;
-            const namePaciente = () => firebase.auth().currentUser.displayName;
-            console.log(namePaciente());
-            firebase.firestore().collection('users').doc(botao).update({ Calendar: getAcept, Hour: getDeny, Pacient: namePaciente()})
-            .then(() => {
-              printAqui.querySelector(`#getAgenda-${botao}`).style.display = 'none';
-              printAqui.querySelector(`#btn-${botao}`).removeAttribute('style');
-            })
-          }
-        });
 
-          btnAcept.addEventListener('change', getPending)
-          btnDeny.addEventListener('change', getPending) */
-          
+    
 
-    return container;
-  };
-  
+
+
+    
+
+
+
+
+    
+
