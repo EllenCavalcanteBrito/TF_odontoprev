@@ -1,4 +1,3 @@
-
 <a name="readme-top"></a>
 
 <br />
@@ -15,7 +14,7 @@
 
   <br>
   
-  **Status do Projeto:** _Em desenvolvimento_ 
+  *Status do Projeto:* Concluído 
     <br />
     <br />
      <a href = "mailto:odontoprev1.tf@gmail.com">Reportar um bug</a>
@@ -27,21 +26,32 @@
 </div>
 
 ## Sumário
-* [Sobre o Projeto](#sobre-o-projeto)
-* [Aplicação](#aplicação)
-* [Protótipo](#protótipo)
-* [Utilizado Por](#utilizado-por)
-* [Contato](#contato)
+* [1.Sobre o Projeto](#1.sobre-o-projeto)
+* [2.Aplicação](#2.aplicação)
+  * [2.1.Tecnologias Utilizadas](#2.2.tecnologias-utilizadas)
+  * [2.2.Banco de dados](#2.3.Banco-de-dados)
+  * [2.3.Fluxograma](#2.3.fluxograma)
+* [3.Protótipo](#3.protótipo)
+* [4.Contribuindo](#4.contribuindo)
+* [5.Contato](#5.contato)
 
 </br>
 
-## Sobre o projeto
-Este projeto tem como objetivo a criação de uma aplicação para marcar consultas com dentistas da rede credenciada pelo aplicativo beneficiário, este desafio foi proposto pela empresa Odontoprev.
-E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008, e deve ser concluído em até três dias.
+## 1.Sobre o projeto
+
+Este projeto foi desenvolvido durante o bootcamp da Laborátoria - turma SAP008, no talent fest. E tem como objetivo a criação de uma aplicação para facilitar o agendamento de consultas para beneficiários e credenciados da empresa Odontoprev.
+
+<b><h3>Necessidades e objetivos:</b></h3>
+<b>Beneficiário:</b> Acesso a rede de credenciados, escolher por região o dentista e agendar a consulta. 
+E verificar as consultas já agendadas.
+
+<b>Credenciados:</b> Página para visualizar os pedidos de consultas pendentes e também visualizar as consultas já confirmadas ou canceladas.
+
+O projeto foi construído em três dias, por code review e live code e desenvolvido por: Alana Cardoso, Barbara Scatolin, Ellen Cavalcante, Gleyciane Macena, Nathalia Rigo, Thaina Prado.
 
 </br>
 
-### Tecnologias Utilizadas
+### 2.1.Tecnologias Utilizadas
 
   - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="height: 30px;"/> `HTML`
 
@@ -57,28 +67,40 @@ E está sendo desenvolvido durante o talent fest da Laborátoria - turma SAP 008
 
 </br>
 
-## Banco de dados
+### 2.2.Banco de dados
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" style="height: 30px;"/> Firebase 
 
 </br>
 
-## Aplicação
+### 2.3.Fluxograma
+Iniciamos o projeto após receber a solicitação do cliente e com isso fizemos o primeiro fluxograma das telas de aplicação, para entender a lógica que deveria ser criada e com isso definir as tasks para a equipe de desenvolvedoras iniciar o projeto.
+A organização das tarefas foi feita através do Trello, por 'baby steps' de ações a serem inseridas na aplicação.
 
-![Localhost]![AppPort]
+
+IINSERIR FOTOS
+
+## 3.Protótipo
+Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev.
+
+<b><h3>Protótipo alta fidelidade - Web:</h3></b>
+
+• Tela de Login<br>
+<img src="./src/logo/1login.png"><br>
+
+• Tela de Cadastro<br>
+<img src="./src/logo/2cadastro.png"><br>
+
+• Tela do Usuário Beneficiário<br>
+<img src="./src/logo/5marcar.png"><br>
+<img src="./src/logo/6status.png">
+
+• Tela do Usuário Dentista<br>
+<img src="./src/logo/3agendamentos.png"><br>
+<img src="./src/logo/4pendentes.png">
 
 </br>
 
-## Fluxograma
-<img src="./src/logo/fluxograma.jpeg">
-
-</br>
-
-## Protótipo
-Iniciamos o protótipo no figma, fizemos a elaboração do layout de acordo ao desafio proposto pela odontoprev.
-
-</br>
-
-## Contribuindo
+## 4.Contribuindo
 
 1. Solicite a mudança ao time responsavel 
 2. Crie sua feature branch (`git checkout -b feature/newFeature `)
@@ -88,7 +110,7 @@ Iniciamos o protótipo no figma, fizemos a elaboração do layout de acordo ao d
 
 </br>
 
-## Contato
+## 5.Contato
 
 * Alana Cardoso: [Linkedin](https://www.linkedin.com/in/alana-karine/) | [GitHub](https://github.com/AlanaK2)
 * Barbara Scatolin: [Linkedin](https://www.linkedin.com/in/barbara-scatolin/) | [GitHub](https://github.com/oxibarbara)
