@@ -19,7 +19,8 @@ export default () => {
   function getScheduling() {
     const uidDentist = firebase.auth().currentUser.uid;
     db.collection("agenda")
-      .where("Status", "!=", "Pendente", "uidDentist", "==", uidDentist)
+      .where("Status", "!=", "Pendente")
+      .where("uidDentist", "==", uidDentist)
       .get()
       .then((snapshot) => {
         const scheduling = [];
