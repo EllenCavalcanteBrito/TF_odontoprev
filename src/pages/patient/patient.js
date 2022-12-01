@@ -52,16 +52,18 @@ export default () => {
                 <div class='avaliable-text'>
                   <p class='txt'>Agenda disponível</p>
                 </div>
+                
+                <form data-form='${item.user}'>
+                  <div class='avaliable'>
+                    <input type='radio' name='dataHora'  id="getDate1-${item.user}" class='select-avaliable' value='05/12/2022 - 09:00h'>05/12/2022 - 09:00h</input><br>
+                    <input type='radio' name='dataHora'  id="getDate2-${item.user}" class='select-avaliable' value='06/12/2022 - 15:00h'>06/12/2022 - 15:00h</input><br>
+                    <input type='radio' name='dataHora'  id="getDate3-${item.user}" class='select-avaliable' value='07/12/2022 - 08:45h'>07/12/2022 - 08:45h</input><br>
+                  </div>
 
-                <div class='avaliable'>
-                  <input type='radio' name='data-hora-${item.user}'  id="getDate1-${item.user}" class='select-avaliable' value='05/12/2022 - 09:00h'>05/12/2022 - 09:00h</input><br>
-                  <input type='radio' name='data-hora-${item.user}'  id="getDate2-${item.user}" class='select-avaliable' value='06/12/2022 - 15:00h'>06/12/2022 - 15:00h</input><br>
-                  <input type='radio' name='data-hora-${item.user}'  id="getDate3-${item.user}" class='select-avaliable' value='07/12/2022 - 08:45h'>07/12/2022 - 08:45h</input><br>
-                </div>
-
-                <div class='btn-mark'>
-                  <button class= 'btnMark' data-confirm=${item.user}>AGENDAR CONSULTA</button>
-                </div>
+                  <div class='btn-mark'>
+                    <button type="button" class= 'btnMark' data-confirm=${item.user}>AGENDAR CONSULTA</button>
+                  </div>
+                </form>
               </div>
             `;
           })
@@ -72,9 +74,12 @@ export default () => {
   containerDentist.addEventListener("click", (e) => {
     const confirmUid = e.target.dataset.confirm;
 
+
     if (confirmUid) {
+
       const form = containerDentist.querySelector(`[data-form="${confirmUid}"]`);
-      const horario = form.avaliable.value;
+      const horario = form.dataHora.value;
+
       const namePatient = firebase.auth().currentUser.displayName;
       const uidPatient = firebase.auth().currentUser.uid;
       const emailPatient = firebase.auth().currentUser.email;
