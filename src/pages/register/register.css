@@ -75,6 +75,10 @@
   font-size: 1rem;
 }
 
+.button-register:hover {
+  background-color: #d5e6ee;
+}
+
 .register-input,
 .button-register {
   width: 20rem;
