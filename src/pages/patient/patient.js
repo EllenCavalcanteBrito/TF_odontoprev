@@ -8,8 +8,7 @@ export default () => {
       <div id='form-options'>
         <img class='icon-calendar' src='./icon/icons8-calendar-64 (2).png' alt='icon calendar'>
         <p class='text'> Marque sua consulta 
-        <br> ou veja seus agendamentos: </p>
-        <button id='btScheduling'>Agendamentos</button>
+        <br> em poucos passos: </p>
         <select name='rede-credenciada' id='select-grid'>
           <option value> Rede credenciada </option>
           <option value='Centro-Oeste'>Centro-Oeste</option>
@@ -27,7 +26,7 @@ export default () => {
 
   const containerDentist = container.querySelector('.containerDentists'); 
   const btnSelect = container.querySelector('#select-grid');
-  const btnScheduling = container.querySelector('#btScheduling');
+  // const btnScheduling = container.querySelector('#btScheduling');
   const db = firebase.firestore();
 
     function getDentist (){
@@ -99,39 +98,39 @@ export default () => {
 
           btnSelect.addEventListener('change', getDentist)
 
-          function getScheduling (){
-            const uidPatient = firebase.auth().currentUser.uid;
-                db.collection('agenda').where('uidPatient', '==', uidPatient).get()
-                .then(snapshot => {
-                  const scheduling = []
-                  snapshot.docs.forEach(doc => { 
-                    scheduling.push(doc.data());
-                    })       
-                    return scheduling       
-                })
-                .then(scheduling => {
-                  containerDentist.innerHTML = scheduling.map((item) => {  
-                  return `       
-                  <div class='warning-body'>
-                  <section class= 'container-warning'>
-                    <div class='infos'>
-                      <p class='txt-status'>Status da consulta:</p>
-                      <div class='ipt-situation'>${item.Status}</div>
-                      <p class='txt-status'>Data do agendamento: ${item.Date}</p>
-                      <p class='warning'>Qualquer dúvida entre em contato <br>pelo site através do <a class='link' href='https://beneficiario.odontoprev.com.br/fale-conosco'>fale conosco.</a></p>
-                    </div>
-                    <div class='confirmation'>
-                     <button class='btn-back'>Voltar</button>
-                    </div>
-                  </section>
-                </div>    
-              `;
-                    })
-                    .join('')
-                })
-              }
+          // function getScheduling (){
+          //   const uidPatient = firebase.auth().currentUser.uid;
+          //       db.collection('agenda').where('uidPatient', '==', uidPatient).get()
+          //       .then(snapshot => {
+          //         const scheduling = []
+          //         snapshot.docs.forEach(doc => { 
+          //           scheduling.push(doc.data());
+          //           })       
+          //           return scheduling       
+          //       })
+          //       .then(scheduling => {
+          //         containerDentist.innerHTML = scheduling.map((item) => {  
+          //         return `       
+          //         <div class='warning-body'>
+          //         <section class= 'container-warning'>
+          //           <div class='infos'>
+          //             <p class='txt-status'>Status da consulta:</p>
+          //             <div class='ipt-situation'>${item.Status}</div>
+          //             <p class='txt-status'>Data do agendamento: ${item.Date}</p>
+          //             <p class='warning'>Qualquer dúvida entre em contato <br>pelo site através do <a class='link' href='https://beneficiario.odontoprev.com.br/fale-conosco'>fale conosco.</a></p>
+          //           </div>
+          //           <div class='confirmation'>
+          //            <button class='btn-back'>Voltar</button>
+          //           </div>
+          //         </section>
+          //       </div>    
+          //     `;
+          //           })
+          //           .join('')
+          //       })
+          //     }
               
-              btnScheduling.addEventListener('click', getScheduling)
+          //     btnScheduling.addEventListener('click', getScheduling)
 
         return container;
       };
