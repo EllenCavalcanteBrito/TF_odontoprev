@@ -55,6 +55,10 @@
   padding: 0.7rem;
 }
 
+.button-enter:hover {
+  background-color: #d5e6ee;
+}
+
 .esqueci {
   color: var(--white);
   justify-self: center;

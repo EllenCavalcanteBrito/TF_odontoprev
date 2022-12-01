@@ -7,7 +7,7 @@
     <img src="https://odontoprevsite.com.br/site/wp-content/uploads/2020/11/odontoprev-logo.png" alt="Logo" width="150" height="80">
   </a>
 
-<h3 align="center">Telent Fest -  Odontoprev</h3>
+<h3 align="center">Talent Fest -  Odontoprev</h3>
 
   <p align="center">
     <br />

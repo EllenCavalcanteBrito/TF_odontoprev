@@ -3,7 +3,8 @@ import register from "./pages/register/register.js"
 import patient from "./pages/patient/patient.js"
 import dentistPage from "./pages/agendaDentista/dentistPage.js";
 import warning from "./pages/patient/warning.js";
-import header from "./pages/header/header.js";
+import headerPatient from "./pages/header/header_patient.js";
+import headerDentist from "./pages/header/header_dentist.js";
 import warningdentist from "./pages/agendaDentista/warningdentist.js";
 
 const main = document.querySelector('#root');
@@ -20,22 +21,22 @@ const init = () => {
       break;
     case '#patient':
       main.innerHTML = '';
-      main.appendChild(header());
+      main.appendChild(headerPatient());
       main.appendChild(patient());
       break;
     case '#dentistPage':
       main.innerHTML = '';
-      main.appendChild(header());
+      main.appendChild(headerDentist());
       main.appendChild(dentistPage());
       break;
     case '#warning':
       main.innerHTML = '';
-      main.appendChild(header());
+      main.appendChild(headerPatient());
       main.appendChild(warning());
       break;
     case '#warningdentist':
       main.innerHTML = '';
-      main.appendChild(header());
+      main.appendChild(headerPatient());
       main.appendChild(warningdentist());
       break;
 
