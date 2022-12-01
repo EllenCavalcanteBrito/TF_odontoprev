@@ -119,7 +119,7 @@ Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev.
 * Nathalia Rigo: [Linkedin](https://www.linkedin.com/in/nathaliarigo/) | [GitHub](https://github.com/ncrigo)
 * Thaina Prado: [Linkedin](https://www.linkedin.com/in/thaina-prado-893b3b102/) | [GitHub](https://github.com/Thainaprado7)
 
-[⬆ Voltar ao topo](README_Template.md)<br>
+[⬆ Voltar ao topo](https://github.com/EllenCavalcanteBrito/TF_odontoprev)<br>
 
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
 [forks-url]: http://git.odontoprev.com.br/cadastro/CadFat/api-beneficiario2.0/network/members

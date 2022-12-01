@@ -74,7 +74,7 @@ export default () => {
 
     if (confirmUid) {
       const form = containerDentist.querySelector(`[data-form="${confirmUid}"]`);
-      const horario = form.dataHora.value;
+      const horario = form.avaliable.value;
       const namePatient = firebase.auth().currentUser.displayName;
       const uidPatient = firebase.auth().currentUser.uid;
       const emailPatient = firebase.auth().currentUser.email;
