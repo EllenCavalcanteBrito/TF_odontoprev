@@ -5,7 +5,7 @@ export default () => {
       <div id='form-options'>
         <img class='icon-calendar' src='./icon/icons8-calendar-64 (2).png' alt='icon calendar'>
         <p class='patient-title'> Marque sua consulta<br> ou veja seus agendamentos: </p>
-
+        
         <select name='rede-credenciada' id='select-grid'>
           <option>Rede credenciada</option>
           <option value='Centro-Oeste'>Centro-Oeste</option>
@@ -25,7 +25,7 @@ export default () => {
 
   const containerDentist = container.querySelector(".containerDentists");
   const btnSelect = container.querySelector("#select-grid");
-  const btnScheduling = container.querySelector("#btSchedulingPatient");
+  const btnScheduling = container.querySelector("#btSchedulingPatient");  
   const db = firebase.firestore();
 
   function getDentist() {
