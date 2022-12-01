@@ -1,7 +1,7 @@
-import { register } from '../../data/authentication.js';
+import { register } from "../../data/authentication.js";
 
 export default () => {
-  const container = document.createElement('div');
+  const container = document.createElement("div");
   const template = `
     <div class='register-body'>
       <div class='register-infos'>
@@ -74,16 +74,16 @@ export default () => {
   const ASCII_CODE_9 = 57;
   const ASCII_CODE_EXCLAMATION = 33;
   const ASCII_CODE_ARROBA = 64;
-  const beneficiario = container.querySelector('#registerInputBeneficiario');
-  const buttonRegister = container.querySelector('#button-register');
-  const credenciado = container.querySelector('#registerInputCredenciado');
-  const inputData = container.querySelector('#cpfCpnjUser');
-  const inputEmail = container.querySelector('#emailUser');
-  const inputPassword = container.querySelector('#passwordUser');
-  const inputUserName = container.querySelector('#nameUser');
-  const printError = container.querySelector('#print-error-here');
-  const showCredenciado = container.querySelector('#registerInputCro');
-  const numberCro = container.querySelector('#registerInputNumberCro');
+  const beneficiario = container.querySelector("#registerInputBeneficiario");
+  const buttonRegister = container.querySelector("#button-register");
+  const credenciado = container.querySelector("#registerInputCredenciado");
+  const inputData = container.querySelector("#cpfCpnjUser");
+  const inputEmail = container.querySelector("#emailUser");
+  const inputPassword = container.querySelector("#passwordUser");
+  const inputUserName = container.querySelector("#nameUser");
+  const printError = container.querySelector("#print-error-here");
+  const showCredenciado = container.querySelector("#registerInputCro");
+  const numberCro = container.querySelector("#registerInputNumberCro");
 
   function validatePassword() {
     if (
@@ -93,7 +93,7 @@ export default () => {
       !inputData.value ||
       (beneficiario.checked === false && credenciado.checked === false)
     ) {
-      printError.innerHTML = 'Por favor, preencha todos os campos!';
+      printError.innerHTML = "Por favor, preencha todos os campos!";
     } else {
       const email = inputEmail.value;
       const password = inputPassword.value;
@@ -107,7 +107,7 @@ export default () => {
         .then((userCredential) => {
           const user = userCredential.user;
           user.updateProfile({ displayName: userName });
-          return firebase.firestore().collection('users').doc(user.uid).set({
+          return firebase.firestore().collection("users").doc(user.uid).set({
             Data: cpfCpnjUser,
             Profile: getProfile,
             DisplayName: userName,
@@ -116,35 +116,35 @@ export default () => {
           });
         })
         .then(() => {
-          window.location.href = '#login';
+          window.location.href = "#login";
         })
         .catch((error) => {
           const errorCode = error.code;
-          if (errorCode === 'auth/email-already-in-use') {
+          if (errorCode === "auth/email-already-in-use") {
             printError.innerHTML =
-              'E-mail já cadastrado.<br> Insira um e-mail diferente.';
-          } else if (errorCode === 'auth/invalid-email') {
-            printError.innerHTML = 'E-mail inválido';
+              "E-mail já cadastrado.<br> Insira um e-mail diferente.";
+          } else if (errorCode === "auth/invalid-email") {
+            printError.innerHTML = "E-mail inválido";
           } else {
             printError.innerHTML =
-              'Algo deu errado. Por favor, tente novamente.';
+              "Algo deu errado. Por favor, tente novamente.";
           }
         });
     }
   }
 
-  buttonRegister.addEventListener('click', validatePassword);
-  inputData.addEventListener('keypress', justNumber);
-  credenciado.addEventListener('keypress', justNumber);
-  numberCro.addEventListener('keypress', justNumber);
-  inputUserName.addEventListener('keypress', blockNumber);
+  buttonRegister.addEventListener("click", validatePassword);
+  inputData.addEventListener("keypress", justNumber);
+  credenciado.addEventListener("keypress", justNumber);
+  numberCro.addEventListener("keypress", justNumber);
+  inputUserName.addEventListener("keypress", blockNumber);
 
-  credenciado.addEventListener('click', () => {
-    showCredenciado.style.display = 'block';
+  credenciado.addEventListener("click", () => {
+    showCredenciado.style.display = "block";
   });
 
-  beneficiario.addEventListener('click', () => {
-    showCredenciado.style.display = 'none';
+  beneficiario.addEventListener("click", () => {
+    showCredenciado.style.display = "none";
   });
 
   function justNumber(eventNumber) {

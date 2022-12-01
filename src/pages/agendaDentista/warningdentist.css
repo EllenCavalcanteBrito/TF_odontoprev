@@ -1,25 +1,28 @@
-.pending-body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin-top: 4rem;
+.pending-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4rem;
 }
-.consulta-pendente{
-    width: 380px;
-    height: 85px;
-    padding: 1.5rem;
-    background: #F9C906;
-    border-radius: 5px;
-    font-size: 5rem;
-    font-weight: bolder;
-    text-transform: uppercase;
+
+.consulta-pendente {
+  width: 380px;
+  height: 85px;
+  padding: 1.5rem;
+  background: #f9c906;
+  border-radius: 5px;
+  font-size: 5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
-.containerPending{
-    background-color: var(--white);
+
+.containerPending {
+  background-color: var(--white);
 }
-.notePending{
-    background-color: #F4F59C;
-    width: 380px;
-    height: 85px;
+
+.notePending {
+  background-color: #f4f59c;
+  width: 380px;
+  height: 85px;
 }

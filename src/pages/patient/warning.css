@@ -1,7 +1,7 @@
 .warning-body {
   display: flex;
-  justify-content: center;
   position: relative;
+  margin-left: 2%;
 }
 
 .container-warning {
@@ -9,52 +9,63 @@
   display: flex;
   width: 25rem;
   height: 20rem;
-  margin-top: 10rem;
   border-radius: 0.3rem;
   justify-content: space-around;
+  padding: 1rem;
 }
 
-.link{
+.link {
   color: white;
   font-size: 0.8rem;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-.infos{
-position: absolute;
-margin-top: 2rem;
-text-align: center;
+.infos {
+  position: absolute;
+  text-align: center;
 }
 
-.txt-status{
+.txt-status {
   color: white;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   text-align: center;
   font-weight: bolder;
   text-transform: uppercase;
-
-
 }
 
-.ipt-situation{
+.ipt-situation {
   height: 2rem;
   width: 22rem;
   background-color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.warning{
+.txt-date {
+  margin-top: 3rem;
+  color: black;
+  font-size: bold;
+}
+
+.warning {
   color: white;
   font-size: 0.8rem;
-  margin-top: 4rem;
+  margin-top: 2.2rem;
 }
 
-.btn-back {
+.btn-reschedule {
   color: black;
-  background-color: white;
-  margin-top: 18rem;
-  margin-left: 20rem;
+  background-color: #f9c906;
+  font-weight: bold;
+  width: 12rem;
+  height: 1.8rem;
   border-radius: 0.3rem;
-  width: 4rem;
-  height: 1.6rem;
   cursor: pointer;
+  margin-top: 16rem;
+}
+
+.btn-reschedule:hover {
+  background-color: #e4e677;
 }

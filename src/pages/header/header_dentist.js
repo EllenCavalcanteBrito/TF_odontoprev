@@ -1,12 +1,11 @@
 export default () => {
   const containerHeaderDentist = document.createElement('div');
-
   const headerDentist = `
     <div class='header-dentist'>
       <img class='logo-header-dentist' src='./logo/logo_odontoprev_branco_png.png' alt='odontoprev logo'>
 
       <div class='header-dentist-nav'>
-        <button id='btn-header-scheduling' class='btns-nav'>Consultas agendadas </button>
+        <button id='btn-header-scheduling' class='btns-nav'>Agendamentos</button>
         <button id='btn-header-pending' class='btns-nav'>Consultas pendentes</button>
         <button id='who-header-dentist' class='btns-nav''>Quem somos</button>
         <button id='help-header-dentist' class='btns-nav''>Ajuda</button>

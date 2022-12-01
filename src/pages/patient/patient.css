@@ -3,6 +3,7 @@
   margin-top: 3rem;
   justify-content: center;
   color: #9a9494;
+  padding: 1rem;
 }
 
 .icon-calendar {
@@ -21,11 +22,11 @@
   margin-left: 1rem;
 }
 
-.text {
+.patient-title {
   font-size: 1rem;
 }
 
-.containerDentists{
+.containerDentists {
   width: 100%;
   height: auto;
   display: flex;
@@ -45,7 +46,7 @@
   font-size: 1rem;
 }
 
-.txt-dentists{
+.txt-dentists {
   width: 17rem;
   height: 8rem;
   text-align: center;
@@ -70,48 +71,50 @@
 }
 
 .info2 {
-  padding-top: 0.8rem;
+  padding-top: 0.5rem;
   padding-left: 1rem;
   font-size: 0.8rem;
 }
 
-.avaliable{
+.avaliable {
   background-color: #d9d9d9;
   text-align: center;
   margin-top: 1.5rem;
-  
 }
 
-.avaliable-text{
-  background-color: #BEC7BC;
+.avaliable-text {
+  background-color: #bec7bc;
   width: 20rem;
   height: 1rem;
-  margin-top: 2.5rem;
   display: table-cell;
   vertical-align: middle;
 }
 
-.txt{
+.txt {
   font-weight: bold;
   text-align: center;
+  font-size: 1rem;
 }
 
-.select-avaliable{
+.select-avaliable {
   background-color: #d9d9d9;
   cursor: pointer;
 }
 
-.btn-mark{
+.btn-mark {
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
 
-.btnMark{
-  background-color: #4CD729;
-  color:white;
-  width: 8rem;
-  height: 2rem;
-  border-radius: 0.5rem;
+.btnMark {
+  background-color: #3ec21d;
+  color: white;
+  width: 12rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
   cursor: pointer;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
 }

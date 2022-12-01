@@ -1,6 +1,5 @@
 export default () => {
   const containerHeaderPatient = document.createElement('div');
-
   const headerPatient = `
     <div class='patient-header'>
       <img class='logo-odontoprev' src='./logo/logo_odontoprev_branco_png.png' alt='odontoprev logo'>
