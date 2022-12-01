@@ -1,0 +1,50 @@
+.header-dentist {
+  background-color: #0165fe;
+  max-width: 100%;
+  height: 4.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-header-dentist {
+  width: 18rem;
+  height: 3.1rem;
+  position: absolute;
+  left: 1.8rem;
+}
+
+.btns-nav {
+  background-color: #0165fe;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: white;
+  display: inline-block;
+  justify-content: space-between;
+  position: absolute;
+}
+
+#btn-header-scheduling {
+  border: none;
+  margin-left: 12rem;
+}
+
+#btn-header-pending {
+  border: none;
+  margin-left: 19rem;
+}
+
+#who-header-dentist {
+  border: none;
+  margin-left: 28rem;
+}
+
+#help-header-dentist {
+  border: none;
+  margin-left: 34rem;
+}
+
+#exit-header-dentist {
+  border: none;
+  margin-left: 37rem;
+}

@@ -8,9 +8,9 @@ export const login = (email, password) => firebase
     
 export const register = (email, password, username) => firebase.auth().createUserWithEmailAndPassword(email, password, username);
 
-export const getDisplayName = () => firebase.auth().currentUser.displayName;
+// export const getDisplayName = () => firebase.auth().currentUser.email;
 
-export const getUserUid = () => firebase.auth().currentUser.uid;
+//export const getUserUid = () => firebase.auth().currentUser.uid;
 
 
 
