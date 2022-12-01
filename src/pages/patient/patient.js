@@ -9,7 +9,7 @@ export default () => {
         <img class='icon-calendar' src='./icon/icons8-calendar-64 (2).png' alt='icon calendar'>
         <p class='text'> Marque sua consulta 
         <br> ou veja seus agendamentos: </p>
-        <button id='btnagenda'>Agendamentos</button>
+        <button id='btScheduling'>Agendamentos</button>
         <select name='rede-credenciada' id='select-grid'>
           <option value> Rede credenciada </option>
           <option value='Centro-Oeste'>Centro-Oeste</option>
@@ -27,13 +27,11 @@ export default () => {
 
   const containerDentist = container.querySelector('.containerDentists'); 
   const btnSelect = container.querySelector('#select-grid');
-  const btnAgenda = container.querySelector('#btnagenda');
+  const btnScheduling = container.querySelector('#btScheduling');
   const db = firebase.firestore();
 
-  btnAgenda.addEventListener('click', getScheduling)
-
     function getDentist (){
-          db.collection('users').where('profile', '==', 'Credenciado').get()
+          db.collection('users').where('Profile', '==', 'Credenciado').get()
           .then(snapshot => {
             const dentist = []
             snapshot.docs.forEach(doc => { 
@@ -46,8 +44,8 @@ export default () => {
             return `       
           <div class='container-dentists'>
               <div class='txt-dentists'>
-              <p class='info1'><img class='icon-people' src='./icon/usuario.png' alt='icon people'>Dentista: ${item.displayName}</p>
-              <p class='info2'><img class='icon-document' src='./icon/document-writer.png' alt='icon document'>CNPJ: ${item.data}</p>
+              <p class='info1'><img class='icon-people' src='./icon/usuario.png' alt='icon people'>Dentista: ${item.DisplayName}</p>
+              <p class='info2'><img class='icon-document' src='./icon/document-writer.png' alt='icon document'>CNPJ: ${item.Data}</p>
             </div>
             <div class='avaliable-text'>
               <p class='txt'>Agenda disponível</p>
@@ -74,7 +72,7 @@ export default () => {
       
           if (confirmUid) {
 
-          //  const getDate = document.querySelectorAll("input[name='data-hora-${item.user}']").forEach((input) => {
+          //  const getDate = document.querySelectorAll("input[name='data-hora']").forEach((input) => {
           //     input.addEventListener('change', function(){
           //     console.log(this.value);
           //     });
@@ -102,9 +100,8 @@ export default () => {
           btnSelect.addEventListener('change', getDentist)
 
           function getScheduling (){
-            const db = firebase.firestore();
-              const uidPaciente = firebase.auth().currentUser.uid;
-                db.collection('agenda').where('uidPatient', '==', uidPaciente).get()
+            const uidPatient = firebase.auth().currentUser.uid;
+                db.collection('agenda').where('uidPatient', '==', uidPatient).get()
                 .then(snapshot => {
                   const scheduling = []
                   snapshot.docs.forEach(doc => { 
@@ -129,10 +126,13 @@ export default () => {
                   </section>
                 </div>    
               `;
-                    });
+                    })
+                    .join('')
                 })
               }
               
+              btnScheduling.addEventListener('click', getScheduling)
+
         return container;
       };
 
