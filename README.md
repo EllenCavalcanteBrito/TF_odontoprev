@@ -47,7 +47,7 @@ E verificar as consultas já agendadas.
 
 <b>Credenciados:</b> Página para visualizar os pedidos de consultas pendentes e também visualizar as consultas já confirmadas ou canceladas.
 
-O projeto foi construído em três dias, por code review e live code e desenvolvido por: Alana Cardoso, Barbara Scatolin, Ellen Cavalcante, Gleyciane Macena, Nathalia Rigo, Thaina Prado.
+O projeto foi construído como web first e projetado em três dias,  por code review e live code e desenvolvido por: Alana Cardoso, Barbara Scatolin, Ellen Cavalcante, Gleyciane Macena, Nathalia Rigo, Thaina Prado.
 
 </br>
 
@@ -80,7 +80,7 @@ A organização das tarefas foi feita através do Trello, por 'baby steps' de a�
 IINSERIR FOTOS
 
 ## 3.Protótipo
-Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev.
+Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev, sendo web first.
 
 <b><h3>Protótipo alta fidelidade - Web:</h3></b>
 

@@ -19,6 +19,7 @@ export default () => {
     const uidDentist = firebase.auth().currentUser.uid;
     db.collection("agenda")
       .where("uidDentist", "==", uidDentist)
+      .where("Status", "==", "Pendente")
       .get()
       .then((snapshot) => {
         const scheduling = [];
@@ -55,20 +56,22 @@ export default () => {
   }
 
   containerDentist.addEventListener("click", (e) => {
-    const status = e.target.dataset.confirm;
-    const newStatus = status ? "Confirmado" : "Cancelado";
+      const idCancel = e.target.dataset.cancel;
+ 
 
-    if (status) {
-      firebase.firestore().collection("agenda").doc(status).update({ Status: newStatus });
+    if (idCancel) {
+      const newStatus = idCancel ? "Cancelado" : "Confirmado";
+      firebase.firestore().collection("agenda").doc(idCancel).update({ Status: newStatus });   
     }
   });
 
   containerDentist.addEventListener("click", (e) => {
-      const status = e.target.dataset.cancel;
-      const newStatus = status ? "Confirmado" : "Cancelado";
+    const idConfirm = e.target.dataset.confirm;
+ 
 
-    if (status) {
-      firebase.firestore().collection("agenda").doc(status).update({ Status: newStatus });   
+    if (idConfirm) {
+         const newStatus = idConfirm ? "Confirmado" : "Cancelado";
+      firebase.firestore().collection("agenda").doc(idConfirm).update({ Status: newStatus });
     }
   });
 

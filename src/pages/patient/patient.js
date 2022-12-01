@@ -71,6 +71,11 @@ export default () => {
       });
   }
 
+  const namePatient = firebase.auth().currentUser.displayName;
+  const uidPatient = firebase.auth().currentUser.uid;
+  const emailPatient = firebase.auth().currentUser.email;
+
+  
   containerDentist.addEventListener("click", (e) => {
     const confirmUid = e.target.dataset.confirm;
 
@@ -80,9 +85,7 @@ export default () => {
       const form = containerDentist.querySelector(`[data-form="${confirmUid}"]`);
       const horario = form.dataHora.value;
 
-      const namePatient = firebase.auth().currentUser.displayName;
-      const uidPatient = firebase.auth().currentUser.uid;
-      const emailPatient = firebase.auth().currentUser.email;
+
 
       firebase.firestore().collection("agenda").add({
         Date: horario,
