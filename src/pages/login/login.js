@@ -42,10 +42,9 @@ export default () => {
     const password = inputPassword.value;
     login(email, password)
       .then((user) => {
-        if (user.profile === "Beneficiário") {
+        if (user.Profile === "Beneficiário") {
           return (window.location.href = "#patient");
         } else {
-          alert("Página em contrução");
           return (window.location.href = "#dentistPage");
         }
       })

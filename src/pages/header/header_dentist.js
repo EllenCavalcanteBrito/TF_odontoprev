@@ -16,32 +16,32 @@ export default () => {
 
   containerHeaderDentist.innerHTML = headerDentist;
 
-  // const btnAgendar = containerHeaderDentist.querySelector('#btn-header-scheduling');
-  // btnAgendar.addEventListener('click', () => {
-  //   window.location.hash = '#dentistPage';
-  // });
+  const btnAgendar = containerHeaderDentist.querySelector('#btn-header-scheduling');
+  btnAgendar.addEventListener('click', () => {
+    window.location.hash = '#dentistPage';
+  });
 
-  // // const btnPending = containerHeaderDentist.querySelector('#btn-header-pending');
-  // // btnPending.addEventListener('click', () => {
-  // //   window.location.hash = '#pending';
-  // // });
+  const btnPending = containerHeaderDentist.querySelector('#btn-header-pending');
+  btnPending.addEventListener('click', () => {
+    window.location.hash = '#warningdentist';
+  });
 
-  // const btnWho = containerHeaderDentist.querySelector('#who');
-  // btnWho.addEventListener('click', () => {
-  //   window.location.href =
-  //     'https://www.odontoprev.com.br/quem-somos/nossa-estrutura';
-  // });
+  const btnWhoD = containerHeaderDentist.querySelector('#who-header-dentist');
+  btnWhoD.addEventListener('click', () => {
+    window.location.href =
+      'https://www.odontoprev.com.br/quem-somos/nossa-estrutura';
+  });
 
-  // const btnHelp = containerHeaderDentist.querySelector('#help');
-  // btnHelp.addEventListener('click', () => {
-  //   window.location.href =
-  //     'https://beneficiario.odontoprev.com.br/perguntas-frequentes';
-  // });
+  const btnHelpD = containerHeaderDentist.querySelector('#help-header-dentist');
+  btnHelpD.addEventListener('click', () => {
+    window.location.href =
+      'https://beneficiario.odontoprev.com.br/perguntas-frequentes';
+  });
 
-  // const btnExit = containerHeaderDentist.querySelector('#exit');
-  // btnExit.addEventListener('click', () => {
-  //   window.location.hash = '#login';
-  // });
+  const btnExitD = containerHeaderDentist.querySelector('#exit-header-dentist');
+  btnExitD.addEventListener('click', () => {
+    window.location.hash = '#login';
+  });
 
   return containerHeaderDentist;
 };

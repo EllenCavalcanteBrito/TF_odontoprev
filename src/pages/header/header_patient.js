@@ -5,8 +5,7 @@ export default () => {
       <img class='logo-odontoprev' src='./logo/logo_odontoprev_branco_png.png' alt='odontoprev logo'>
 
       <div class='navbar'>
-        <button id= 'btn-scheduling' class='btns-navbar'>Agendar consultas</button>
-        <button id= 'btn-warning' class='btns-navbar'>Minhas consultas</button>
+        <button id= 'btn-scheduling' class='btns-navbar'>Consultas</button>
         <button id= 'who' class='btns-navbar'>Quem somos</button>
         <button id= 'help' class='btns-navbar'>Ajuda</button>
         <button id= 'exit' class='btns-navbar'>Sair</button>
@@ -19,11 +18,6 @@ export default () => {
   const btnAgendar = containerHeaderPatient.querySelector('#btn-scheduling');
   btnAgendar.addEventListener('click', () => {
     window.location.hash = '#patient';
-  });
-
-  const btnWarning = containerHeaderPatient.querySelector('#btn-warning');
-  btnWarning.addEventListener('click', () => {
-    window.location.hash = '#warning';
   });
 
   const btnWho = containerHeaderPatient.querySelector('#who');

@@ -3,18 +3,7 @@ export default () => {
   const template = `
     <div class='patient-body'>
       <div id='form-options'>
-        <img class='icon-calendar' src='./icon/icons8-calendar-64 (2).png' alt='icon calendar'>
-        <p class='text'> Marque sua consulta 
-        <br> ou veja seus agendamentos: </p>
-        <button id='btScheduling'>Agendamentos</button>
-        <select name='rede-credenciada' id='select-grid'>
-          <option value> Rede credenciada </option>
-          <option value='Centro-Oeste'>Centro-Oeste</option>
-          <option value='Nordeste'>Nordeste</option>
-          <option value='Norte'>Norte</option>
-          <option value='Sudeste'>Sudeste</option>
-          <option value='Sul'>Sul</option>
-        </select>
+        <button id='btScheduling' class='btSchedulingw'>Consultas Pendentes</button>
       </div>
       <section class='containerDentists'></section>
     </div>
@@ -34,25 +23,28 @@ export default () => {
       .then((snapshot) => {
         const scheduling = [];
         snapshot.docs.forEach((doc) => {
-          scheduling.push(doc.data());
+          console.log(doc)
+          scheduling.push(doc);
         });
         return scheduling;
       })
       .then((scheduling) => {
         containerDentist.innerHTML = scheduling
           .map((item) => {
+            const dados = item.data();
             return `       
-              <div class='warning-body'>
-              <section class= 'container-warning'>
-                <div class='infos'>
-                  <p class='txt-status'>Status da consulta:</p>
-                  <div class='ipt-situation'>${item.Status}</div>
-                  <p class='txt-status'>Data do agendamento: ${item.Date}</p>
-                  <p class='txt-status'>Data do agendamento: ${item.Patient}</p>
-                  <p class='warning'>Qualquer dúvida entre em contato <br>pelo site através do <a class='link' href='https://beneficiario.odontoprev.com.br/fale-conosco'>fale conosco.</a></p>
-                </div>
-                <div class='confirmation'>
-                  <button class='btn-back'>Voltar</button>
+            <div class='warning-body'>
+              <section class= 'dentist-warning-w'>
+                <div class='dentist-info'>
+                  <p class='txt-dentist'>Status da consulta:</p>
+                  <div class='ipt-situation'>${dados.Status}</div>
+                  <p class='txt-dentist'>Nome do beneficiário: ${dados.Patient}</p>
+                  <p class='txt-dentist'>Data do agendamento: ${dados.Date}</p>
+                  <p class='warning'>Qualquer informação entre em contato com <br> o beneficiário através do e-mail:<br> ${dados.emailPatient} .</p>
+                  <div class='btns'>
+                  <button id='btnAcept' class='btnAcept' data-confirm=${item.id}>Aceitar</button>
+                  <button id='btnDeny' class='btnDeny' data-cancel=${item.id}>Recusar</button>
+                  </div>
                 </div>
               </section>
             </div>    
@@ -61,6 +53,24 @@ export default () => {
           .join("");
       });
   }
+
+  containerDentist.addEventListener("click", (e) => {
+    const status = e.target.dataset.confirm;
+    const newStatus = status ? "Confirmado" : "Cancelado";
+
+    if (status) {
+      firebase.firestore().collection("agenda").doc(status).update({ Status: newStatus });
+    }
+  });
+
+  containerDentist.addEventListener("click", (e) => {
+      const status = e.target.dataset.cancel;
+      const newStatus = status ? "Confirmado" : "Cancelado";
+
+    if (status) {
+      firebase.firestore().collection("agenda").doc(status).update({ Status: newStatus });   
+    }
+  });
 
   btnScheduling.addEventListener("click", getScheduling);
 

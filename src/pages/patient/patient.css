@@ -1,3 +1,4 @@
+/* Select da região para busca do dentista */
 #form-options {
   display: flex;
   margin-top: 3rem;
@@ -26,6 +27,21 @@
   font-size: 1rem;
 }
 
+#btSchedulingPatient {
+  margin-left: 3rem;
+  margin-top: 1.2rem;
+  background-color: #0165fe;
+  color: white;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+#btSchedulingPatient:hover {
+  background-color: rgb(23, 148, 206);
+  cursor: pointer;
+}
+
 .containerDentists {
   width: 100%;
   height: auto;
@@ -37,6 +53,7 @@
   margin-top: 3rem;
 }
 
+/* Card para marcar consulta */
 .container-dentists {
   background-color: #d9d9d9;
   width: 17rem;
@@ -117,4 +134,77 @@
   padding: 0.5rem;
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+/* Status da Consulta para o Beneficiário */
+.warning-body {
+  display: flex;
+  position: relative;
+  margin-left: 2%;
+}
+
+.container-warning {
+  background-color: #0165fe;
+  display: flex;
+  width: 25rem;
+  height: 20rem;
+  border-radius: 0.3rem;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.infos {
+  position: absolute;
+  text-align: center;
+}
+
+.txt-status {
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.ipt-situation {
+  height: 2rem;
+  width: 22rem;
+  background-color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.txt-date {
+  margin-top: 3rem;
+  color: black;
+  font-size: bold;
+}
+
+.warning {
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 2.2rem;
+}
+
+.link {
+  color: white;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+.btn-reschedule {
+  color: black;
+  background-color: #f9c906;
+  font-weight: bold;
+  width: 12rem;
+  height: 1.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 16rem;
+}
+
+.btn-reschedule:hover {
+  background-color: #e4e677;
 }
