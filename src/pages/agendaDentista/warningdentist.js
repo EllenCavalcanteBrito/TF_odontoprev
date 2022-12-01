@@ -2,12 +2,12 @@ export default () => {
     const container = document.createElement('div');
   
     const template = ` 
-      <main>
-            <div class='pending-body'
-                <section class='containerPending'>
-                </section>
-            </div>
-      </main>
+      <div class='pending-body'>
+        <div class='consulta-pendente'>
+          <h1> Consultas pendentes</h1>
+        </div>
+                <section class='containerPending'></section>
+      </div>
     `;
   
     container.innerHTML = template;
@@ -31,6 +31,7 @@ export default () => {
             printAqui.innerHTML = pending.map((item) => {  
             return `       
                 <div class='containerPending'>
+                  <div class='notePending'>
                     <p class='info1'>Beneficiário: ${item.Pacient}</p>
                     <p>Data: ${item.Calendar}</p>
                     <p>Hora: ${item.Hour}</p>
@@ -43,6 +44,7 @@ export default () => {
                             <button data-deny=${item.user}></button>
                         </div>
                     </div>
+                  </div>  
                 </div>
                   `;
               });
@@ -70,6 +72,7 @@ export default () => {
 
           btnAcept.addEventListener('change', getPending)
           btnDeny.addEventListener('change', getPending) */
+          
 
     return container;
   };
