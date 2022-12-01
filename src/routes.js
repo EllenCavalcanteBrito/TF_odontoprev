@@ -5,6 +5,7 @@ import dentistPage from "./pages/agendaDentista/dentistPage.js";
 import warning from "./pages/patient/warning.js";
 import headerPatient from "./pages/header/header_patient.js";
 import headerDentist from "./pages/header/header_dentist.js";
+import warningdentist from "./pages/agendaDentista/warningdentist.js";
 
 const main = document.querySelector('#root');
 
@@ -32,6 +33,11 @@ const init = () => {
       main.innerHTML = '';
       main.appendChild(headerPatient());
       main.appendChild(warning());
+      break;
+    case '#warningdentist':
+      main.innerHTML = '';
+      main.appendChild(headerPatient());
+      main.appendChild(warningdentist());
       break;
 
     default: main.appendChild(login());
