@@ -26,18 +26,18 @@
 </div>
 
 ## Sumário
-* [1.Sobre o Projeto](#1.sobre-o-projeto)
-* [2.Aplicação](#2.aplicação)
-  * [2.1.Tecnologias Utilizadas](#2.2.tecnologias-utilizadas)
-  * [2.2.Banco de dados](#2.3.Banco-de-dados)
-  * [2.3.Fluxograma](#2.3.fluxograma)
-* [3.Protótipo](#3.protótipo)
-* [4.Contribuindo](#4.contribuindo)
-* [5.Contato](#5.contato)
+* [1. Sobre o Projeto](#1-sobre-o-projeto)
+* [2. Aplicação](#2.aplicação)
+  * [2.1. Tecnologias Utilizadas](#2.2-tecnologias-utilizadas)
+  * [2.2. Banco de dados](#2.3-Banco-de-dados)
+  * [2.3. Fluxograma](#2.3-fluxograma)
+* [3. Protótipo](#3-protótipo)
+* [4. Contribuindo](#4-contribuindo)
+* [5. Contato](#5.contato)
 
 </br>
 
-## 1.Sobre o projeto
+## 1. Sobre o projeto
 
 Este projeto foi desenvolvido durante o bootcamp da Laborátoria - turma SAP008, no talent fest. E tem como objetivo a criação de uma aplicação para facilitar o agendamento de consultas para beneficiários e credenciados da empresa Odontoprev.
 
@@ -51,7 +51,7 @@ O projeto foi construído como web first e projetado em três dias,  por code re
 
 </br>
 
-### 2.1.Tecnologias Utilizadas
+### 2.1. Tecnologias Utilizadas
 
   - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="height: 30px;"/> `HTML`
 
@@ -67,19 +67,19 @@ O projeto foi construído como web first e projetado em três dias,  por code re
 
 </br>
 
-### 2.2.Banco de dados
+### 2.2. Banco de dados
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" style="height: 30px;"/> Firebase 
 
 </br>
 
-### 2.3.Fluxograma
+### 2.3. Fluxograma
 Iniciamos o projeto após receber a solicitação do cliente e com isso fizemos o primeiro fluxograma das telas de aplicação, para entender a lógica que deveria ser criada e com isso definir as tasks para a equipe de desenvolvedoras iniciar o projeto.
 A organização das tarefas foi feita através do Trello, por 'baby steps' de ações a serem inseridas na aplicação.
 
 <img src="./src/logo/fluxograma.jpeg"><br>
 
 
-## 3.Protótipo
+## 3. Protótipo
 Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev, sendo web first.
 
 <b><h3>Protótipo alta fidelidade - Web:</h3></b>
@@ -100,7 +100,7 @@ Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev, 
 
 </br>
 
-## 4.Contribuindo
+## 4. Contribuindo
 
 1. Solicite a mudança ao time responsavel 
 2. Crie sua feature branch (`git checkout -b feature/newFeature `)
@@ -110,7 +110,7 @@ Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev, 
 
 </br>
 
-## 5.Contato
+## 5. Contato
 
 * Alana Cardoso: [Linkedin](https://www.linkedin.com/in/alana-karine/) | [GitHub](https://github.com/AlanaK2)
 * Barbara Scatolin: [Linkedin](https://www.linkedin.com/in/barbara-scatolin/) | [GitHub](https://github.com/oxibarbara)
