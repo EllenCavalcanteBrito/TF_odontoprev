@@ -76,8 +76,8 @@ O projeto foi construído como web first e projetado em três dias,  por code re
 Iniciamos o projeto após receber a solicitação do cliente e com isso fizemos o primeiro fluxograma das telas de aplicação, para entender a lógica que deveria ser criada e com isso definir as tasks para a equipe de desenvolvedoras iniciar o projeto.
 A organização das tarefas foi feita através do Trello, por 'baby steps' de ações a serem inseridas na aplicação.
 
+<img src="./src/logo/fluxograma.jpeg"><br>
 
-IINSERIR FOTOS
 
 ## 3.Protótipo
 Realizamos o protótipo no figma de acordo ao desafio proposto pela odontoprev, sendo web first.
